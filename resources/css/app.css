@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
+@theme {
+    --font-sans:
+        'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+
+    /* Indigo for actions, highlights and active states. */
+    --color-brand: #4f46e5;
+    --color-brand-hover: #4338ca;
+    --color-brand-soft: #eef2ff;
+
+    /* Near-black navy for text and dark sections. */
+    --color-ink: #0f172a;
+
+    /* Page background and hairline borders. */
+    --color-canvas: #fafafe;
+    --color-line: #e2e8f0;
+
+    --shadow-soft: 0 20px 40px -15px rgb(79 70 229 / 0.08);
+    --shadow-floating: 0 25px 50px -12px rgb(15 23 42 / 0.12);
+
+    --animate-float: float 6s ease-in-out infinite;
+    --animate-fade-in: fade-in 0.5s ease-out;
+    --animate-slide-in: slide-in 0.35s ease-out;
+
+    @keyframes slide-in {
+        from {
+            opacity: 0;
+            transform: translateX(12px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-6px);
+        }
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(4px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@utility no-scrollbar {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

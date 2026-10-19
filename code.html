@@ -1,0 +1,877 @@
+<!doctype html>
+
+<html class="scroll-smooth" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>whizz — Boost your learning with online 1-on-1 tutors</title>
+        <!-- Tailwind CSS CDN with plugins -->
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <!-- Tailwind Configuration -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            brand: {
+                                lime: '#D8F966',
+                                limeHover: '#c6e855',
+                                dark: '#111827',
+                                graySub: '#4B5563',
+                                badgeBg: '#F3F4F6',
+                            },
+                        },
+                        fontFamily: {
+                            sans: [
+                                'Inter',
+                                'system-ui',
+                                '-apple-system',
+                                'BlinkMacSystemFont',
+                                'Segoe UI',
+                                'Roboto',
+                                'sans-serif',
+                            ],
+                        },
+                        boxShadow: {
+                            soft: '0 20px 40px -15px rgba(0, 0, 0, 0.07)',
+                            floating: '0 25px 50px -12px rgba(0, 0, 0, 0.12)',
+                        },
+                    },
+                },
+            };
+        </script>
+        <!-- Typography and Base Styles -->
+        <style data-purpose="typography">
+            @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+            body {
+                font-family: 'Plus Jakarta Sans', sans-serif;
+                color: #111827;
+                background-color: #fafafa;
+                overflow-x: hidden;
+            }
+        </style>
+        <!-- Custom Decorative and Ambient Background Styles -->
+        <style data-purpose="ambient-gradients">
+            .tutor-glow-bg {
+                background: radial-gradient(
+                    circle at 75% 20%,
+                    rgba(254, 240, 138, 0.6) 0%,
+                    rgba(254, 215, 170, 0.4) 30%,
+                    rgba(244, 114, 182, 0.25) 60%,
+                    rgba(243, 232, 255, 0.6) 100%
+                );
+            }
+            .hero-glow-soft {
+                background: radial-gradient(
+                    circle at 10% 20%,
+                    rgba(254, 249, 195, 0.5) 0%,
+                    rgba(255, 237, 213, 0.3) 45%,
+                    rgba(255, 255, 255, 0) 70%
+                );
+            }
+        </style>
+    </head>
+    <body
+        class="selection:bg-brand-lime min-h-screen text-slate-900 antialiased selection:text-black"
+    >
+        <!-- BEGIN: MainHeader -->
+        <header
+            class="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md transition-all duration-300"
+            data-purpose="site-navigation"
+        >
+            <div
+                class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12"
+            >
+                <!-- Brand Logo -->
+                <a
+                    class="group flex items-center gap-1"
+                    data-purpose="brand-logo"
+                    href="#"
+                >
+                    <span
+                        class="text-3xl font-extrabold tracking-tight text-slate-900 transition-opacity group-hover:opacity-90"
+                        >whizz</span
+                    >
+                </a>
+                <!-- Center Nav Links as Rounded Badges -->
+                <nav
+                    aria-label="Main Navigation"
+                    class="hidden items-center gap-2 rounded-full border border-gray-200/50 bg-gray-100/80 p-1.5 md:flex"
+                >
+                    <a
+                        class="rounded-full px-5 py-2 text-sm font-medium text-slate-700 transition-all duration-200 hover:bg-white hover:text-slate-900"
+                        href="#how-it-works"
+                        >How it works</a
+                    >
+                    <a
+                        class="rounded-full px-5 py-2 text-sm font-medium text-slate-700 transition-all duration-200 hover:bg-white hover:text-slate-900"
+                        href="#disciplines"
+                        >Find tutors</a
+                    >
+                    <a
+                        class="rounded-full px-5 py-2 text-sm font-medium text-slate-700 transition-all duration-200 hover:bg-white hover:text-slate-900"
+                        href="#become-tutor"
+                        >Become a tutor</a
+                    >
+                </nav>
+                <!-- Right Action CTAs -->
+                <div class="flex items-center gap-5">
+                    <a
+                        class="text-sm font-semibold text-slate-800 transition-colors hover:text-slate-600"
+                        href="#login"
+                        >Log in</a
+                    >
+                    <a
+                        class="hover:bg-brand-limeHover bg-brand-lime rounded-full px-6 py-2.5 text-sm font-semibold text-slate-950 shadow-sm transition-all duration-200 hover:shadow active:scale-95"
+                        href="#signup"
+                    >
+                        Sign up
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- END: MainHeader -->
+        <!-- BEGIN: HeroSection -->
+        <section
+            class="hero-glow-soft relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28"
+            data-purpose="hero-section"
+        >
+            <div class="mx-auto max-w-7xl px-6 lg:px-12">
+                <div
+                    class="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8"
+                >
+                    <!-- Left Hero Copy -->
+                    <div
+                        class="flex flex-col items-start pr-0 lg:col-span-6 lg:pr-6"
+                    >
+                        <h1
+                            class="mb-6 text-5xl leading-[1.08] font-extrabold tracking-tight text-slate-950 sm:text-6xl lg:text-7xl"
+                        >
+                            Boost your<br class="hidden sm:inline" />
+                            learning
+                        </h1>
+                        <p
+                            class="mb-8 max-w-lg text-lg leading-relaxed font-normal text-slate-600"
+                        >
+                            Find an online tutor to help you achieve your
+                            educational goals whether it's mastering a
+                            challenging subject, preparing for exams, or
+                            enhancing specific skills.
+                        </p>
+                        <a
+                            class="hover:bg-brand-limeHover bg-brand-lime inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 text-base font-semibold text-slate-950 shadow-sm transition-all duration-200 hover:shadow-md active:scale-95"
+                            href="#disciplines"
+                        >
+                            <span>Get started</span>
+                            <svg
+                                class="h-4 w-4 text-slate-950"
+                                fill="none"
+                                stroke="currentColor"
+                                viewbox="0 0 24 24"
+                            >
+                                <path
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2.5"
+                                ></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <!-- Right Hero Visual with Interactive Overlays -->
+                    <div class="relative flex justify-center lg:col-span-6">
+                        <!-- Main Hero Image Container with Rounded Corners -->
+                        <div
+                            class="relative w-full max-w-lg overflow-hidden rounded-3xl border border-white bg-slate-100 shadow-xl lg:max-w-none"
+                        >
+                            <img
+                                alt="Female student attending interactive online tutoring session"
+                                class="h-[440px] w-full object-cover object-top sm:h-[500px]"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJIbjE8Y4RtayHMFXLS_OpiDE_6psanyVXTrIldzoiO0qacocqZT_ghkURSoSm7BG7DjOCncpiAifmlPDKKJLhL1bLS-ytEWDpYt-WlaXiYqWZEmSRoS8TQ-6HPURezzUIoV8B0ut8jj99NU3jwJbGO6tswFPTcp2HLEUfV9RH4I-MKlb_RJC-vLCk4b5dMOLDhgXqQKRhyO2MHZY_yU7H-iMcFOhOHS1Wkv8tUVqT2s1Z_Bbv5Iof"
+                            />
+                        </div>
+                        <!-- Top-Left Floating Badge: My Classes -->
+                        <div
+                            class="absolute -top-4 -left-3 w-52 -translate-y-2 transform rounded-2xl border border-slate-100 bg-white/95 px-4 py-3 shadow-floating backdrop-blur-md sm:top-12 sm:left-4"
+                            data-purpose="class-schedule-badge"
+                        >
+                            <div
+                                class="mb-2 flex items-center justify-between text-[11px] font-semibold text-slate-400"
+                            >
+                                <span>My classes</span>
+                                <svg
+                                    class="h-3.5 w-3.5 text-slate-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewbox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div
+                                class="flex items-center justify-between rounded-xl border border-slate-100/80 bg-slate-50 p-2"
+                            >
+                                <div class="flex items-center gap-2">
+                                    <div
+                                        class="flex h-7 w-7 items-center justify-center rounded-full bg-amber-100 text-xs font-bold text-amber-800"
+                                    >
+                                        ⚛
+                                    </div>
+                                    <div>
+                                        <div
+                                            class="text-xs leading-tight font-bold text-slate-800"
+                                        >
+                                            Physics
+                                        </div>
+                                        <div class="text-[10px] text-slate-400">
+                                            Jeremy C.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="inline-block rounded-md border border-slate-200/60 bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 shadow-2xs"
+                                        >Apr 4</span
+                                    >
+                                    <span
+                                        class="mt-0.5 block text-[9px] text-slate-400"
+                                        >3:30 pm</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bottom-Left Floating Tutor Profile Card: Tim G. -->
+                        <div
+                            class="absolute -bottom-6 -left-2 max-w-[280px] rounded-2xl border border-slate-100 bg-white/95 p-4 shadow-floating backdrop-blur-md sm:left-2 sm:max-w-[310px]"
+                            data-purpose="tutor-profile-card"
+                        >
+                            <div class="mb-3 flex items-start justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="relative">
+                                        <img
+                                            alt="Tim G. tutor avatar"
+                                            class="border-brand-lime h-12 w-12 rounded-full border-2 object-cover"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkBXGizzvlin6uocLaOjPbNIaU59vKk6Ir0XokAidiNR3UDhI1hvq7yHCRvmfqEJ024A3x3nENrcvb59SY0TjdnDl6C3X8a1g5lrK32t_AgRmMbM_V1ozPaRliJvlZ9iEqrLczNEBLl535NCeeQBo_TlsxBFo1qAd04REsZorwE3jwIWeb0uNnaV8v59rNVHqmU5NvByhoxV-FoFOa-hxHE_FQ0quWqL1gbY9S96j8oUUDsAXMs69K"
+                                        />
+                                        <span
+                                            class="absolute right-0 bottom-0 h-3 w-3 rounded-full border-2 border-white bg-green-500"
+                                        ></span>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center gap-1.5">
+                                            <h3
+                                                class="text-sm leading-none font-bold text-slate-900"
+                                            >
+                                                Tim G.
+                                            </h3>
+                                            <span class="text-xs">🇦🇺</span>
+                                        </div>
+                                        <div
+                                            class="mt-1 flex items-center gap-1 text-[11px] text-slate-500"
+                                        >
+                                            <svg
+                                                class="h-3 w-3 text-slate-400"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewbox="0 0 24 24"
+                                            >
+                                                <path
+                                                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                ></path>
+                                            </svg>
+                                            <span>Art</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button
+                                    aria-label="Favorite tutor"
+                                    class="text-slate-300 transition-colors hover:text-rose-500"
+                                >
+                                    <svg
+                                        class="h-4 w-4"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewbox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <!-- Stats Mini Bar -->
+                            <div
+                                class="mb-3 grid grid-cols-2 gap-2 rounded-xl bg-slate-50 p-2 text-[11px] text-slate-600"
+                            >
+                                <div>
+                                    <span
+                                        class="block text-[9px] font-bold tracking-wider text-slate-400 uppercase"
+                                        >Experience</span
+                                    >
+                                    <span class="font-semibold text-slate-800"
+                                        >4 active • 144 lessons</span
+                                    >
+                                </div>
+                                <div>
+                                    <span
+                                        class="block text-[9px] font-bold tracking-wider text-slate-400 uppercase"
+                                        >Languages</span
+                                    >
+                                    <span
+                                        class="block truncate font-semibold text-slate-800"
+                                        >English &amp; French</span
+                                    >
+                                </div>
+                            </div>
+                            <!-- Pricing and Action Buttons -->
+                            <div
+                                class="flex items-center justify-between border-t border-slate-100 pt-1"
+                            >
+                                <div class="flex items-baseline gap-1">
+                                    <span
+                                        class="flex items-center text-xs font-bold text-slate-900"
+                                    >
+                                        5
+                                        <span
+                                            class="ml-0.5 text-[10px] text-amber-400"
+                                            >★</span
+                                        >
+                                    </span>
+                                    <span
+                                        class="ml-1.5 text-xs font-medium text-slate-400"
+                                        >$20<span class="text-[10px]"
+                                            >/hr</span
+                                        ></span
+                                    >
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <button
+                                        class="hover:bg-brand-limeHover bg-brand-lime rounded-lg px-2.5 py-1.5 text-[11px] font-bold text-slate-900 shadow-2xs transition-all"
+                                    >
+                                        Book trial
+                                    </button>
+                                    <button
+                                        class="rounded-lg bg-slate-100 px-2.5 py-1.5 text-[11px] font-semibold text-slate-700 transition-all hover:bg-slate-200"
+                                    >
+                                        Message
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: HeroSection -->
+        <!-- BEGIN: MetricsSection -->
+        <section
+            class="border-y border-slate-200/80 bg-white py-12"
+            data-purpose="metrics-banner"
+        >
+            <div class="mx-auto max-w-7xl px-6 lg:px-12">
+                <div
+                    class="grid grid-cols-2 gap-8 divide-x-0 divide-slate-100 text-center md:grid-cols-4 md:divide-x"
+                >
+                    <div class="px-4">
+                        <p
+                            class="text-3xl font-extrabold tracking-tight text-slate-950 lg:text-4xl"
+                        >
+                            2700+
+                        </p>
+                        <p class="mt-1 text-sm font-medium text-slate-500">
+                            Qualified tutors
+                        </p>
+                    </div>
+                    <div class="px-4">
+                        <p
+                            class="text-3xl font-extrabold tracking-tight text-slate-950 lg:text-4xl"
+                        >
+                            3000+
+                        </p>
+                        <p class="mt-1 text-sm font-medium text-slate-500">
+                            Happy students
+                        </p>
+                    </div>
+                    <div class="px-4">
+                        <p
+                            class="text-3xl font-extrabold tracking-tight text-slate-950 lg:text-4xl"
+                        >
+                            100+
+                        </p>
+                        <p class="mt-1 text-sm font-medium text-slate-500">
+                            Disciplines taught
+                        </p>
+                    </div>
+                    <div class="px-4">
+                        <p
+                            class="text-3xl font-extrabold tracking-tight text-slate-950 lg:text-4xl"
+                        >
+                            140k+
+                        </p>
+                        <p class="mt-1 text-sm font-medium text-slate-500">
+                            Positive tutor reviews
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: MetricsSection -->
+        <!-- BEGIN: DisciplinesShowcaseSection -->
+        <section
+            class="tutor-glow-bg relative overflow-hidden px-6 py-28 lg:px-12"
+            data-purpose="tutor-showcase-section"
+            id="disciplines"
+        >
+            <div
+                class="relative mx-auto flex min-h-[580px] max-w-7xl flex-col justify-between"
+            >
+                <!-- Center Title and CTA Content -->
+                <div class="z-20 mx-auto my-auto max-w-2xl py-12 text-center">
+                    <h2
+                        class="mb-4 text-4xl leading-tight font-extrabold tracking-tight text-slate-950 sm:text-5xl"
+                    >
+                        Our tutors will help you in any discipline
+                    </h2>
+                    <p class="mx-auto mb-8 max-w-md text-base text-slate-600">
+                        From creative writing to business analytics, find
+                        subject-matter experts dedicated to your rapid growth.
+                    </p>
+                    <a
+                        class="hover:bg-brand-limeHover bg-brand-lime inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-semibold text-slate-950 shadow-sm transition-all duration-200 hover:shadow active:scale-95"
+                        href="#browse-all"
+                    >
+                        Find a tutor
+                    </a>
+                </div>
+                <!-- Floating Tutor 1: Selena (Top-Left) -->
+                <div
+                    class="mb-6 flex w-fit items-center gap-3 self-start rounded-2xl border border-white/60 bg-white/90 p-2 pr-4 shadow-soft backdrop-blur-md transition-transform duration-300 hover:scale-105 lg:absolute lg:top-4 lg:left-12 lg:mb-0"
+                >
+                    <img
+                        alt="Selena, Spanish tutor"
+                        class="h-12 w-12 rounded-xl object-cover shadow-inner"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOiEXgufK2X-Zi6NbwQZ1YpkwapL54df-AZesRtyvxPeD7UMdFSMyPrBTRfIFffRSVtdWN3vh9pIGADCWv57ggIOwUTk69WGjjBxUU5AYfRdWH5-nWXjAmiDw2FESvjb8RSjlLplThlvBnTT6byKng7vD7VIe-2FyOkZbYDuH-x8HCO6J8S5F-4lrg31jNM3H8rU1qzlY2rUzTOBQxIY9ZSj5orhf7tjUBBZlpqV5v6kVpGa2FLyci"
+                    />
+                    <div>
+                        <span
+                            class="block text-xs leading-tight font-bold text-slate-900"
+                            >Selena</span
+                        >
+                        <span
+                            class="block text-[11px] font-medium text-slate-500"
+                            >Spanish tutor</span
+                        >
+                    </div>
+                </div>
+                <!-- Floating Tutor 2: Lucy (Top-Right / Center-Right) -->
+                <div
+                    class="mb-6 flex w-fit items-center gap-3 self-end rounded-2xl border border-white/60 bg-white/90 p-2 pr-4 shadow-soft backdrop-blur-md transition-transform duration-300 hover:scale-105 lg:absolute lg:top-8 lg:right-32 lg:mb-0"
+                >
+                    <img
+                        alt="Lucy, Fashion Illustration tutor"
+                        class="h-12 w-12 rounded-xl object-cover shadow-inner"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPpzwSpQZHRK-D_4G6V--39GKxnpekwoLHfrh8kE89A91PUuWzTy21JZc3VgVkkm5CNWuo_ATqEJt8VQuZzB-E5PWbXLTCfoDZdtHgnk_Uvu2nThHF1ywKU8BRMZa-efenWWIJscObd0uQIMcnnB13w9cVRVfkTANGZVOIyRsuvzP6K_qxj3bXKAOMtbwGwQ70cFjIPM498WL9zECli3wJPTqqO3kas0MvJ6eiSabrd0YaK0fxeGE_"
+                    />
+                    <div>
+                        <span
+                            class="block text-xs leading-tight font-bold text-slate-900"
+                            >Lucy</span
+                        >
+                        <span
+                            class="block text-[11px] font-medium text-slate-500"
+                            >Fashion illustration tutor</span
+                        >
+                    </div>
+                </div>
+                <!-- Floating Tutor 3: David (Far-Right Middle) -->
+                <div
+                    class="mb-6 flex w-fit items-center gap-3 self-end rounded-2xl border border-white/60 bg-white/90 p-2 pr-4 shadow-soft backdrop-blur-md transition-transform duration-300 hover:scale-105 lg:absolute lg:right-8 lg:bottom-28 lg:mb-0"
+                >
+                    <img
+                        alt="David, Anatomy tutor"
+                        class="h-12 w-12 rounded-xl object-cover shadow-inner"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi24NeLb90suNJdy8tLzYTfs9bZ-BJCWIM_c2oT9KwRsB6SoM7OzloKZNy8WhQIS-amWrncSRazDkzN7b2tOgzNX1QfoXjk69rl5ogb1xctnM5hG6UGfNsHDfjXbmKLT68-hpO_j-YloXR75h9AqtqUXHPhFn8O_F3jlZRllXngtPRVtEyTNNC7wJQaJXZBSv0TTLaYzl_lCjOI1L_YkEZk8dJGoQQKy-wAlhBPA0m8LAqCnlHuJbi"
+                    />
+                    <div>
+                        <span
+                            class="block text-xs leading-tight font-bold text-slate-900"
+                            >David</span
+                        >
+                        <span
+                            class="block text-[11px] font-medium text-slate-500"
+                            >Anatomy tutor</span
+                        >
+                    </div>
+                </div>
+                <!-- Floating Tutor 4: Ash (Bottom-Center Right) -->
+                <div
+                    class="flex w-fit items-center gap-3 self-start rounded-2xl border border-white/60 bg-white/90 p-2 pr-4 shadow-soft backdrop-blur-md transition-transform duration-300 hover:scale-105 lg:absolute lg:bottom-6 lg:left-1/2 lg:translate-x-12 lg:transform"
+                >
+                    <img
+                        alt="Ash, Product design tutor"
+                        class="h-12 w-12 rounded-xl object-cover shadow-inner"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA828eYEtwBfxA4tJ9ZYY_H2ErA7N1pFo3AwepABFcpZEmvflULKAawXjDUnrbR_iPsuLM24tocOUckoqCmEEqFEP-CLOqvyT78iHw4Anu0BcoDy6fevxBfaRWXJFN6j8rWs8uzxuVgOiudjRqEIcM-QWER1Ymw7ZxjIfyZ4U6OoC9MTBDKZ7EO7F7UG0luoDQF0yvBSRaUZUtv4HybXansqtVfx8U_alRjLDbi6Can7UnEYhkWp9b2"
+                    />
+                    <div>
+                        <span
+                            class="block text-xs leading-tight font-bold text-slate-900"
+                            >Ash</span
+                        >
+                        <span
+                            class="block text-[11px] font-medium text-slate-500"
+                            >Product design tutor</span
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: DisciplinesShowcaseSection -->
+        <!-- BEGIN: CommunityAndTestimonialsSection -->
+        <section
+            class="bg-white py-24"
+            data-purpose="community-testimonials-section"
+        >
+            <div class="mx-auto max-w-7xl px-6 lg:px-12">
+                <!-- Section Headline -->
+                <div class="mb-16 max-w-xl">
+                    <h2
+                        class="text-4xl leading-tight font-extrabold tracking-tight text-slate-950 sm:text-5xl"
+                    >
+                        Backed by a community of enthusiastic learners
+                    </h2>
+                </div>
+                <div
+                    class="grid grid-cols-1 items-center gap-12 lg:grid-cols-12"
+                >
+                    <!-- Left: Overlapping Student Visual Gallery -->
+                    <div
+                        class="lg:col-span-7"
+                        data-purpose="learner-photo-strip"
+                    >
+                        <div
+                            class="relative no-scrollbar flex items-center gap-2 overflow-x-auto rounded-3xl pt-2 pb-4 sm:gap-3"
+                        >
+                            <!-- Student 1 -->
+                            <div
+                                class="h-80 w-36 flex-shrink-0 overflow-hidden rounded-2xl shadow-md sm:w-44"
+                            >
+                                <img
+                                    alt="Student learner community member"
+                                    class="h-full w-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5I8uO-Q-Cu2ZSUXo0kPyB20abaEwMvePOI5DxE6tmGFkdKLYHIGgNCoUyIRhmk4Tt2Kxii4DEd8t2aS7GH9m6Md3FeFAdQ84XCnI5iYV1faDLx5pY689-LD9G0IHdPNohSf1nZNbkgmSERGp-cWx5oD6OL3DcBvpiCVMti5pHKot-YUkVOv0A-Nyhk-sb4WvOZk19uqXrd_-mYQ5U_6eXZ5PAvbup_uuytJAOMJSVfdqOKXQhCr3e"
+                                />
+                            </div>
+                            <!-- Student 2 -->
+                            <div
+                                class="h-80 w-36 flex-shrink-0 overflow-hidden rounded-2xl shadow-md sm:w-44"
+                            >
+                                <img
+                                    alt="Student learner community member"
+                                    class="h-full w-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5Y-5DPfkx37n-_mBdMcQ08oG4JjBjQWPNH9VU6VFk9f6TwGl-4g8fUurTG5yoMh2s5HHnnlcdLhcUF___Tov-CioThrdHQXHhthwmPmC2QQlYAbvH9RcP7SFfKb0SjtmNganYDzhOblBWBF-TK1JAR9WWX2fk1mR119n0ImjDrsLyx3rkpRdYuUPdepsPs-hWWpFFufCjZDjaTYeq8pnNGu0TMELKXkodbAlXQoWMz16k7J7-tVqf"
+                                />
+                            </div>
+                            <!-- Student 3 -->
+                            <div
+                                class="h-80 w-36 flex-shrink-0 overflow-hidden rounded-2xl shadow-md sm:w-44"
+                            >
+                                <img
+                                    alt="Student learner community member"
+                                    class="h-full w-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYiBZZxJzjfvsI7jaU_TeJNW7J8REHsQS3GRCSCPIG3q6Awv3-7drqK8w3uM2sQU4r8QOtsUqsSL0qyFr6pa6xhW83mrClFuuTcdHBUPvmHnh5FL0EvkAddIrrrPl_DzdW8mDkI2eEtGYrP8bHDABUYkepMP0KiHNu7XCEpwiG8BCADvOztoia_XEn2J8auIpytzTGszE71qdxXDscJ7IMuyq5dWoTyd0m9tfTcCbqqENakSDk0jbG"
+                                />
+                            </div>
+                            <!-- Student 4 (Highlighted Hero Face) -->
+                            <div
+                                class="ring-brand-lime/30 h-88 w-44 flex-shrink-0 overflow-hidden rounded-2xl shadow-xl ring-4 sm:w-56"
+                            >
+                                <img
+                                    alt="Smiling learner Nate"
+                                    class="h-full w-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGmKfNtMF-oRmeO4F12RpS-8i9meXmLoScn-rfj4zraPWijlLl6q7KWzq9HoO3jzF32DIUSa81M6t7_jTktRg0tLGFPJSUZQ8Lf3Bjbx6U6wJx8K1iiZiWg9cr8pR-oySdCbCLqxkeUqvtA2daDEl_CKqb6n_XwvO5sncm9dGkOadIL8Dq0SorVBk2yEK45HJRiLPBg6L94v6TgRmyrkdfBhDZSnwkqlLpoOL3PmBlxY_0MRaEsZNp"
+                                />
+                            </div>
+                        </div>
+                        <!-- Pagination indicator dots -->
+                        <div class="mt-4 ml-1 flex items-center gap-1.5">
+                            <span
+                                class="h-1.5 w-6 rounded-full bg-slate-800"
+                            ></span>
+                            <span
+                                class="h-1.5 w-1.5 rounded-full bg-slate-300"
+                            ></span>
+                            <span
+                                class="h-1.5 w-1.5 rounded-full bg-slate-300"
+                            ></span>
+                        </div>
+                    </div>
+                    <!-- Right: Focused Testimonial Card with Large Quotation Marks -->
+                    <div
+                        class="relative lg:col-span-5"
+                        data-purpose="student-testimonial-quote"
+                    >
+                        <!-- Big stylized soft quotation icon -->
+                        <div
+                            class="-mb-8 ml-0 font-serif text-8xl leading-none text-pink-300/60 select-none"
+                        >
+                            “
+                        </div>
+                        <div class="relative bg-white pt-2">
+                            <h3
+                                class="mb-4 text-2xl font-bold tracking-tight text-slate-900"
+                            >
+                                Game-changer!
+                            </h3>
+                            <p
+                                class="mb-6 text-base leading-relaxed font-normal text-slate-600"
+                            >
+                                The personalized guidance from my tutor helped
+                                me grasp complex concepts with ease. I've seen a
+                                noticeable improvement in my grades and
+                                confidence levels. Highly recommend whizz to
+                                anyone looking to excel in their studies!
+                            </p>
+                            <div class="text-sm font-semibold text-slate-900">
+                                Nate,
+                                <span class="font-normal text-slate-500"
+                                    >Math learner</span
+                                >
+                            </div>
+                            <!-- Carousel Action Controls -->
+                            <div class="mt-8 flex items-center gap-2">
+                                <button
+                                    aria-label="Previous testimonial"
+                                    class="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 text-slate-600 transition-colors hover:border-slate-300 hover:bg-slate-50"
+                                >
+                                    <svg
+                                        class="h-4 w-4"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewbox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M15 19l-7-7 7-7"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                        ></path>
+                                    </svg>
+                                </button>
+                                <button
+                                    aria-label="Next testimonial"
+                                    class="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 text-slate-600 transition-colors hover:border-slate-300 hover:bg-slate-50"
+                                >
+                                    <svg
+                                        class="h-4 w-4"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewbox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M9 5l7 7-7 7"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: CommunityAndTestimonialsSection -->
+        <!-- BEGIN: CallToActionBanner -->
+        <section
+            class="relative overflow-hidden bg-slate-950 py-16 text-white"
+            data-purpose="cta-pre-footer"
+        >
+            <div
+                class="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 md:flex-row lg:px-12"
+            >
+                <div>
+                    <h2
+                        class="text-3xl font-extrabold tracking-tight sm:text-4xl"
+                    >
+                        Ready to master any subject?
+                    </h2>
+                    <p class="mt-2 text-base text-slate-400">
+                        Join over 3,000+ ambitious students discovering their
+                        full potential today.
+                    </p>
+                </div>
+                <div class="flex flex-shrink-0 items-center gap-4">
+                    <a
+                        class="hover:bg-brand-limeHover bg-brand-lime rounded-full px-8 py-3.5 font-bold text-slate-950 shadow-md transition-all duration-200"
+                        href="#signup"
+                    >
+                        Get started for free
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- END: CallToActionBanner -->
+        <!-- BEGIN: MainFooter -->
+        <footer
+            class="border-t border-slate-200 bg-white py-16"
+            data-purpose="site-footer"
+        >
+            <div class="mx-auto max-w-7xl px-6 lg:px-12">
+                <div class="mb-12 grid grid-cols-2 gap-8 md:grid-cols-5">
+                    <div class="col-span-2">
+                        <span
+                            class="text-3xl font-extrabold tracking-tight text-slate-950"
+                            >whizz</span
+                        >
+                        <p
+                            class="mt-4 max-w-sm text-sm leading-relaxed text-slate-500"
+                        >
+                            Personalized 1-on-1 online tutoring designed around
+                            your unique learning pace, goals, and schedule.
+                        </p>
+                    </div>
+                    <div>
+                        <p
+                            class="mb-4 text-xs font-bold tracking-wider text-slate-900 uppercase"
+                        >
+                            Explore
+                        </p>
+                        <ul class="space-y-2.5 text-sm text-slate-600">
+                            <li>
+                                <a
+                                    class="transition-colors hover:text-slate-950"
+                                    href="#"
+                                    >How it works</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="transition-colors hover:text-slate-950"
+                                    href="#"
+                                    >Find a tutor</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="transition-colors hover:text-slate-950"
+                                    href="#"
+                                    >Pricing &amp; plans</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="transition-colors hover:text-slate-950"
+                                    href="#"
+                                    >Enterprise</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p
+                            class="mb-4 text-xs font-bold tracking-wider text-slate-900 uppercase"
+                        >
+                            Subjects
+                        </p>
+                        <ul class="space-y-2.5 text-sm text-slate-600">
+                            <li>
+                                <a
+                                    class="transition-colors hover:text-slate-950"
+                                    href="#"
+                                    >Mathematics</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="transition-colors hover:text-slate-950"
+                                    href="#"
+                                    >Physics &amp; Science</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="transition-colors hover:text-slate-950"
+                                    href="#"
+                                    >Languages</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="transition-colors hover:text-slate-950"
+                                    href="#"
+                                    >Arts &amp; Design</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p
+                            class="mb-4 text-xs font-bold tracking-wider text-slate-900 uppercase"
+                        >
+                            Tutors
+                        </p>
+                        <ul class="space-y-2.5 text-sm text-slate-600">
+                            <li>
+                                <a
+                                    class="transition-colors hover:text-slate-950"
+                                    href="#"
+                                    >Become a tutor</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="transition-colors hover:text-slate-950"
+                                    href="#"
+                                    >Tutor guidelines</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="transition-colors hover:text-slate-950"
+                                    href="#"
+                                    >Help Center</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col items-center justify-between gap-4 border-t border-slate-100 pt-8 text-xs text-slate-400 sm:flex-row"
+                >
+                    <p>© 2025 whizz Inc. All rights reserved.</p>
+                    <div class="flex items-center gap-6">
+                        <a
+                            class="transition-colors hover:text-slate-600"
+                            href="#"
+                            >Privacy Policy</a
+                        >
+                        <a
+                            class="transition-colors hover:text-slate-600"
+                            href="#"
+                            >Terms of Service</a
+                        >
+                        <a
+                            class="transition-colors hover:text-slate-600"
+                            href="#"
+                            >Cookie Settings</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END: MainFooter -->
+    </body>
+</html>

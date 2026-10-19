@@ -1,0 +1,838 @@
+[
+    {
+        "term": "Afiliasi",
+        "definition": "Hubungan keluarga karena perkawinan dan keturunan sampai derajat kedua, baik secara horisontal maupun vertikal. Hubungan antara pihak dengan pegawai direktur atau komisaris dari pihak tersebut. Hubungan antara perusahaan dengan pihak yang secara langsung atau tidak langsung mengendalikan, dikendalikan, atau di bawah suatu pengendalian dari perusahaan tersebut atau, Hubungan antara perusahaan dengan pemegang saham utama."
+    },
+    {
+        "term": "Agen Penjual",
+        "definition": "Perusahaan Efek yang ditunjuk sebagai agen untuk menjual saham baru kepada masyarakat."
+    },
+    {
+        "term": "Agio",
+        "definition": "Nilai yang dimaksudkan ke dalam modal sendiri yang berasal dari selisih harga jual dikurangi nilai pari suatu emisi saham yang berasal dari dalam portepel dan dicatat di dalam akun (rekening) tersendiri yang juga bernama AGIO."
+    },
+    {
+        "term": "Aktiva Berwujud Bersih (Net Tangible Assets)",
+        "definition": "Total Aktiva dikurangi dengan Aktiva Tidak Berwujud, Aktiva Pajak Tangguhan, dan Total Kewajiban termasuk Hak Kepemilikan Minoritas."
+    },
+    {
+        "term": "Aktiva Pajak Tangguhan",
+        "definition": "Jumlah pajak penghasilan terpulihkan pada periode mendatang sebagai akibat adanya perbedaan temporer yang boleh dikurangkan dan sisa kompensasi kerugian."
+    },
+    {
+        "term": "Aktiva Tidak Berwujud (Intangible Asset)",
+        "definition": "Aktiva non moneter yang dapat diidentifikasi dan tidak memiliki wujud fisik serta dimiliki untuk digunakan dalam menghasilkan barang atau jasa, disewakan kepada pihak lainnya, atau untuk tujuan administratif."
+    },
+    {
+        "term": "Akuisisi",
+        "definition": "Penggabungan badan usaha dengan cara menguasai sebagian besar saham badan usaha lain. Dengan akuisisi, dua atau lebih badan usaha tersebut tetap eksis secara hukum dan badan usaha yang menguasai saham paling besar menjadi induk perusahaan yang harus menyajikan laporan keuangan konsolidasi. Jadi, pada prinsipnya saham atau aset dari suatu perusahaan dibeli atau diambil alih oleh pihak lain baik perusahaan atau perorangan. (lihat juga pengertian merger dan konsolidasi)."
+    },
+    {
+        "term": "Allotment (penjatahan)",
+        "definition": "Suatu jumlah yang disetujui untuk dipenuhi bagi setiap permohonan pembelian Efek yang diajukan para pemodal sebagai akibat tidak terpenuhinya seluruh permohonan karena jumlah permohonan melebihi jumlah penawaran pada masa Pasar Perdana."
+    },
+    {
+        "term": "American Depository Receipt (ADR)",
+        "definition": "Tanda terima untuk saham dari suatu perusahaan luar negeri yang tercatat dalam suatu bursa di Amerika Serikat. Sebagai contoh, seorang investor di Amerika Serikat yang membeli saham Telkom, maka ia sertifikat yang ia dapatkan adalah dalam bentuk ADR (berbeda dengan saham Telkom yang umumnya beredar di Indonesia). Hal tersebut pada dasarnya untuk memudahkan investor di negara tersebut. Nama lain ADR adalah American Depository Shares."
+    },
+    {
+        "term": "Anggota Bursa Efek",
+        "definition": "Perusahaan Efek yang telah memiliki izin usaha sebagai Perantara Pedagang Efek dari Badan Pengawas Pasar Modal-Lembaga Keuangan (BAPEPAM-LK) dan telah memperoleh Persetujuan Keanggotaan Bursa."
+    },
+    {
+        "term": "Annual Report (laporan tahunan)",
+        "definition": "Suatu laporan resmi mengenai keadaan keuangan emiten dalam jangka waktu 1 tahun. Termasuk di dalam laporan ini antara lain Neraca Perusahaan, Laporan Laba/Rugi dan Neraca Arus Kas. Laporan ini harus disampaikan kepada para pemegang saham untuk disetujui di dalam RUPS untuk selanjutnya disahkan sebagai laporan tahunan resmi perusahaan."
+    },
+    {
+        "term": "Asset Backed Securities (Efek Beragun Aset)",
+        "definition": "Unit Penyertaan Kontrak Investasi Kolektif yang portofolionya terdiri dari aset keuangan berupa tagihan yang timbul dari surat berharga komersial, sewa guna usaha, perjanjian jual-beli bersyarat, perjanjian pinjaman cicilan, tagihan kartu kredit, pemberian kredit termasuk kredit pemilikan rumah atau apartemen, Efek bersifat hutang yang dijamin oleh pemerintah, Sarana Peningkatan Kredit (Credit Enhancement)/ Arus Kas (cash flow), serta aset keuangan setara dan aset keuangan lain yang ber"
+    },
+    {
+        "term": "Auto Rejection",
+        "definition": "Penolakan secara otomatis oleh JATS terhadap penawaran jual dan atau permintaan beli Efek yang dimasukkan ke JATS akibat dilampauinya batasan harga yang ditetapkan oleh Bursa."
+    },
+    {
+        "term": "Batasan Pada Jaminan Nasabah",
+        "definition": "Nilai maksimum dari Efek dan atau saldo kredit yang dapat ditahan oleh Perusahaan Efek sebagai jaminan penyelesaian pesanan terbuka dan kewajiban nasabah lainnya yang tidak termasuk kewajiban dalam Rekening Efek Marjin."
+    },
+    {
+        "term": "Benturan Kepentingan",
+        "definition": "Perbedaan antara kepentingan ekonomis Perusahaan dengan kepentingan ekonomis pribadi direktur, komisaris, atau pemegang saham utama Perusahaan."
+    },
+    {
+        "term": "Biro Administrasi Efek",
+        "definition": "Pihak yang berdasarkan kontrak dengan Emiten melaksanakan pencatatan pemilikan Efek dan pembagian hak yang berkaitan dengan Efek."
+    },
+    {
+        "term": "Bond (Obligasi)",
+        "definition": "Sertifikat bukti utang dan dikeluarkan oleh suatu perseroan terbatas atau institusi tertentu baik pemerintah maupun lembaga lainnya dengan tujuan mendapatkan modal. Perusahaan membayar bunga atas obligasi tersebut pada tanggal-tanggal yg telah ditentukan secara periodik, dan pada akhirnya menebus nilai utang tersebut pada saat jatuh tempo dengan mengembalikan jumlah pokok pinjaman ditambah bunga yg terutang."
+    },
+    {
+        "term": "Book-Entry Settlement",
+        "definition": "Penyelesaian Transaksi dilakukan dengan mendebit dan mengkredit Efek pada rekening kustodian."
+    },
+    {
+        "term": "Buku Pembantu Efek",
+        "definition": "Catatan mengenai Efek yang disimpan pada Perusahaan Efek atau dimiliki oleh Perusahaan Efek yang dibuat dalam bentuk pembukuan ganda yang menunjukkan Posisi Long, Posisi Short dan lokasi Efek tersebut"
+    },
+    {
+        "term": "Bunga Akrual Obligasi (acrual interest)",
+        "definition": "Sejumlah dana yang menjadi hak penjual apabila transaksi jual-beli obligasi terjadi diantara dua tanggal pembayaran kupon bunga obligasi. Perhitungan hari bunga untuk obligasi selalu menggunakan 30 hari setiap bulannya dan 360 hari setiap tahunnya."
+    },
+    {
+        "term": "Bursa Efek",
+        "definition": "Pihak yang menyelenggarakan dan menyediakan sistem dan atau sarana untuk mempertemukan penawaran jual dan beli Efek Pihak-Pihak lain dengan tujuan memperdagangkan Efek di antara mereka."
+    },
+    {
+        "term": "Bursa Efek Indonesia (Bursa)",
+        "definition": "Perseroan yang berkedudukan di Jakarta yang telah memperoleh izin usaha dari Bapepam sebagai pihak yang menyelenggarakan dan menyediakan sistem dan atau sarana untuk mempertemukan penawaran jual dan permintaan beli Efek pihak-pihak lain dengan tujuan memperdagangkan Efek di antara mereka, sebagaimana dimaksud dalam Pasal 1 angka 4 Undang-undang Nomor 8 Tahun 1995 Tentang Pasar Modal."
+    },
+    {
+        "term": "Buy Back",
+        "definition": "Pembelian kembali saham-saham yang telah beredar di publik oleh emiten/perusahaan yang menerbitkan saham tersebut."
+    },
+    {
+        "term": "Calon Perusahaan Tercatat",
+        "definition": "Perseroan Terbatas yang telah mengajukan surat permohonan pencatatan Efeknya di Bursa."
+    },
+    {
+        "term": "Capital Asset Pricing Model (CAPM)",
+        "definition": "Suatu teori penetapan harga aktiva dimana tingkat pengembalian dari aktiva atau surat berharga tersebut adalah sebesar tingkat bunga bebas risiko ditambah dengan faktor penyesuaian sebesar risk premium dikalikan dengan risiko sistematik aktiva tersebut."
+    },
+    {
+        "term": "Capital Gain",
+        "definition": "Keuntungan yang diperoleh karena perbedaan antara harga beli dan harga jual suatu Efek. Apabila perbedaan tersebut bersifat negatif (rugi) disebut capital loss."
+    },
+    {
+        "term": "Closed-End Investment Fund (reksa dana tertutup)",
+        "definition": "Reksa Dana yang melakukan Emisi Saham yang tidak dapat dijual kepada atau dibeli kembali oleh Reksa Dana Yang bersangkutan."
+    },
+    {
+        "term": "Comfort Letter",
+        "definition": "Surat yang dibuat oleh Akuntan yang menyatakan ada atau tidaknya fakta material yang terjadi setelah tanggal laporan keuangan terakhir sampai dengan menjelang tanggal efektifnya Pernyataan Pendaftaran yang dapat mengakibatkan perubahan signifikan atau membahayakan posisi keuangan atau hasil usaha sebagaimana disajikan dalam laporan keuangan yang dilampirkan sebagai bagian dokumen Pernyataan Pendaftaran dan dimuat dalam Prospektus."
+    },
+    {
+        "term": "Company Listing",
+        "definition": "Perusahaan mencatatkan semua modal saham yang telah disetor di Bursa."
+    },
+    {
+        "term": "Conflict of Interest (benturan kepentingan)",
+        "definition": "Perbedaan antara kepentingan ekonomis perusahaan dengan kepentingan ekonomis pribadi direktur, komisaris, atau pemegang saham utama perusahaan."
+    },
+    {
+        "term": "Continous Auction",
+        "definition": "Metode perdagangan dimana transaksi dilakukan berdasarkan proses tawar-menawar secara berkesinambungan."
+    },
+    {
+        "term": "Convertible Bonds",
+        "definition": "Obligasi yang selain memiliki sifat obligasi biasa seperti bunga tetap, pelunasan setelah jangka waktu tertentu, juga mempunyai hak untuk ditukar dengan saham pada waktu dan syarat-syarat yang ditentukan."
+    },
+    {
+        "term": "Current Ratio (rasio lancar)",
+        "definition": "Rasio ini menunjukkan sejauh mana aktiva lancar dapat menutupi kewajiban lancar. Semakin besar hasil perbandingan aktiva lancar dengan hutang lancar, semakin tinggi kemampuan perusahaan untuk menutupi kewajiban jangka pendeknya. Current ratio (CR) dapat dihitung dengan rumus: Aktiva Lancar / Utang Lancar"
+    },
+    {
+        "term": "Current Yield",
+        "definition": "Mengukur tingkat pendapatan pada saat ini berdasarkan tingkat bunga kupon yang diterima dengan harga pasar saat ini. Dihitung dengan rumus: Tingkat Bunga Kupon / Harga Pasar."
+    },
+    {
+        "term": "Daftar Hasil Kliring Netting (DHK Netting)",
+        "definition": "Dokumen elektronik hasil Kliring secara Netting yang dilakukan oleh KPEI yang berisikan hak dan kewajiban setiap Anggota Bursa Efek yang timbul dari Transaksi Bursa yang terjadi di Pasar Reguler dan Pasar Tunai."
+    },
+    {
+        "term": "Daftar Hasil Kliring Per-Transaksi (DHK Per-Transaksi)",
+        "definition": "Data tertulis sebagai hasil proses kliring secara per-transaksi yang dilakukan oleh KPEI yang memuat hak dan kewajiban setiap Anggota Bursa Efek yang timbul dari Transaksi Bursa yang terjadi di pasar Negosiasi pada setiap Hari Bursa berupa kewajiban penyerahan Efek dan atau uang kepada Anggota Bursa Efek lawan transaksinya dan penerimaan Efek dan atau uang dari Anggota Bursa Efek lawan transaksinya serta memuat nama Anggota Bursa Efek lawan transaksinya, Kustodian tempat penyelesaian Transaksi Bursa dan jadwal penyelesaian yang dilakukan oleh KPEI jika terjadi kegagalan penyelesaian transaksi."
+    },
+    {
+        "term": "Daftar Hasil Per-transaksi (DHP)",
+        "definition": "Dokumen elektronik yang tersedia di KPEI yang berisikan hak dan kewajiban setiap Anggota Bursa Efek berdasarkan Daftar Transaksi Bursa yang terjadi di Pasar Negosiasi."
+    },
+    {
+        "term": "Daftar Informasi Perdagangan Efek Harian (DIPH)",
+        "definition": "Dokumen elektronik mengenai Transaksi Bursa harian yang berisikan keterangan mengenai kode dan nama Efek yang tercatat, kurs Efek, volume, nilai dan frekwensi transaksi, permintaan beli dan penawaran jual terakhir, dan indeks harga Saham individu serta hal-hal lain yang dianggap perlu yang berkaitan dengan Transaksi Bursa."
+    },
+    {
+        "term": "Daftar Kurs Efek (DKE)",
+        "definition": "Daftar harian yang diterbitkan Bursa Efek yang memuat keterangan tentang Efek yang tercatat, Kurs Efek, volume, nilai dan frekuensi transaksi, tawaran beli jual, indeks harga saham dan lain-lain yang berkaitan dengan Transaksi Bursa."
+    },
+    {
+        "term": "Daftar Transaksi Bursa (DTB)",
+        "definition": "Dokumen elektronik yang berisikan seluruh Transaksi Bursa yang dilakukan oleh setiap Anggota Bursa Efek pada setiap Hari Bursa yang disediakan oleh Bursa untuk Anggota Bursa Efek dan KPEI pada setiap akhir sesi perdagangan."
+    },
+    {
+        "term": "Debt to Equity Ratio (rasio utang atas modal)",
+        "definition": "Rasio ini sering disebut dengan istilah Rasio Leverage, menggambarkan struktur modal yang dimiliki oleh perusahaan, dengan demikian dapat dilihat struktur risiko tidak tertagihnya hutang. Semakin kecil angka rasio ini semakin baik, yang dapat dihitung dengan rumus: Total Utang / Total Ekuitas"
+    },
+    {
+        "term": "Default (kelalaian)",
+        "definition": "Kegagalan penerbit obligasi untuk membayar kewajiban berupa kupon atau pokok obligasi kepada para pemegang obligasi."
+    },
+    {
+        "term": "Dengar Pendapat (Hearing)",
+        "definition": "Suatu bentuk permintaan penjelasan secara formal kepada Perusahaan Tercatat mengenai masalah yang berkaitan dengan keterbukaan informasi yang dilakukan melalui pertemuan langsung antara Perusahaan Tercatat dengan Bursa."
+    },
+    {
+        "term": "Dilusi",
+        "definition": "Penurunan prosentase kepemilikan saham."
+    },
+    {
+        "term": "Direktur Independen",
+        "definition": "Profesional yang menjadi Direktur Perusahaan Tercatat yang memenuhi persyaratan sebagai berikut:"
+    },
+    {
+        "term": "Dividen",
+        "definition": "Bagian laba atau pendapatan perusahaan yang ditetapkan oleh direksi (dan dishkan oleh rapat pemegang saham) untuk dibagikan kepada pemegang saham. Pembayarannya diatur berdasarkan ketentuan yang berlaku pada jenis saham yang ada."
+    },
+    {
+        "term": "Dividend Payout Ratio (rasio pembayaran dividen)",
+        "definition": "Prosentase tertentu dari laba perusahaan yang dibayarkan sebagai dividen kas kepada pemegang saham."
+    },
+    {
+        "term": "Dividend Yield",
+        "definition": "Jumlah dividen tahunan dari suatu perusahaan yang dinyatakan dalam persentase dari harga pasar terakhir dari saham perusahaan tersebut."
+    },
+    {
+        "term": "Earning per Share/EPS (laba per saham)",
+        "definition": "Bagian proporsional dan laba perusahaan yang dapat diklaim oleh setiap lembar saham biasa yang sedang beredar, yang dihitung dengan membagi laba setelah pajak sesudah pembayaran dividen saham preferen dengan rata-rata saham biasa yang sedang beredar selama periode tersebut."
+    },
+    {
+        "term": "Efek",
+        "definition": "Surat berharga, yaitu surat pengakuan utang, surat berharga komersial, saham, obligasi, tanda bukti utang, Unit Penyertaan kontrak investasi kolektif, kontrak berjangka atas Efek, dan setiap derivatif dari Efek."
+    },
+    {
+        "term": "Efek Bebas",
+        "definition": "Efek yang tercatat sebagai Posisi Long dalam Buku Pembantu Efek nasabah pada Perusahaan Efek yang merupakan kelebihan atas Batasan Pada Jaminan Nasabah dan dapat ditarik oleh nasabah dari rekening Efek setiap saat."
+    },
+    {
+        "term": "Efek Beragun Aset",
+        "definition": "Unit Penyertaan Kontrak Investasi Kolektif yang portofolionya terdiri dari aset keuangan berupa tagihan yang timbul dari surat berharga komersial, sewa guna usaha, perjanjian jual beli bersyarat, perjanjian pinjaman cicilan, tagihan kartu kredit, pemberian kredit termasuk kredit pemilikan rumah atau apartemen, Efek bersifat hutang yang dijamin oleh pemerintah, Sarana Peningkatan Kredit (Credit Enhancement)/Arus Kas (Cash Flow), serta aset keuangan setara dan aset keuangan lain yang berkaitan dengan aset keuangan tersebut. Dengan demikian Efek Beragun Aset bukan merupakan Reksa Dana sebagaimana dimaksud dalam Pasal 1 angka 27 Undang-undang Nomor 8 Tahun 1997 tentang Pasar Modal."
+    },
+    {
+        "term": "Efek Beragun Aset Arus Kas Tetap",
+        "definition": "Efek Beragun Aset yang memberikan hak kepada pemegangnya menerima pembayaran dengan jadual tertentu, walaupun jadual pembayaran tersebut dapat berubah karena keadaan tertentu."
+    },
+    {
+        "term": "Efek Beragun Aset Arus Kas Tidak Tetap",
+        "definition": "Efek Beragun Aset yang memberikan hak kepada pemegangnya untuk menerima pembayaran secara bersyarat dan dalam jumlah yang tidak tetap."
+    },
+    {
+        "term": "Efek Bersifat Ekuitas",
+        "definition": "Saham atau Efek yang dapat ditukar dengan saham atau Efek yang mengandung hak untuk memperoleh saham."
+    },
+    {
+        "term": "Efek Jaminan",
+        "definition": "Efek yang ada dalam rekening Efek nasabah pada Perusahaan Efek pada Posisi Long yang bukan merupakan Efek Bebas"
+    },
+    {
+        "term": "Efek Utama",
+        "definition": "Efek yang dititipkan pada Bank Kustodian yang menjadi dasar diterbitkannya Sertifikat Penitipan Efek Indonesia."
+    },
+    {
+        "term": "Efficient Portfolio",
+        "definition": "Suatu portfolio yang memberikan tingkat keuntungan yang diharapkan yang tertinggi pada tingkat risiko tertentu, atau tingkat risiko paling rendah pada tingkat keuntungan yang diisyaratkan tertentu."
+    },
+    {
+        "term": "Emiten",
+        "definition": "Pihak atau perusahaan yang menawarkan efeknya kepada masyarakat investor melalui penawaran umum."
+    },
+    {
+        "term": "Employee Stock Option Program (ESOP)",
+        "definition": "Program kepemilikan saham oleh Karyawan yang dilakukan melalui Penawaran Saham atau Penawaran Opsi Saham dalam rangka kompensasi kepada Karyawan."
+    },
+    {
+        "term": "Equity (ekuitas)",
+        "definition": "Klaim kepemilikan yang tercatat dari pemegang saham biasa dan preferen pada suatu perusahaan sebagaimana tercermin dalam neraca; juga dihasilkan dari total aktiva yang lebih rendah dari semua kewajiban."
+    },
+    {
+        "term": "Expected Return",
+        "definition": "Merupakan return yang diharapkan investor atas investasi."
+    },
+    {
+        "term": "Firm Manager (Koordinator WPPE)",
+        "definition": "WPPE yang disamping bertugas sebagai pelaksana perdagangan, juga ditunjuk oleh Anggota Bursa untuk mengkoordinasikan para WPPE lainnya dari Anggota Bursa yang bersangkutan dalam melaksanakan perdagangan di Bursa Efek Indonesia sesuai dengan Peraturan ini."
+    },
+    {
+        "term": "Fixed Asset (aktiva tetap)",
+        "definition": "Setiap aktiva dalam neraca yang dipertimbangkan mempunyai umur atau kegunaan untuk bisnis melebihi satu tahun, seperti tanah, bangunan, dan mesin."
+    },
+    {
+        "term": "Force Majeure",
+        "definition": "Peristiwa dan atau keadaan yang terjadi di luar kehendak dan atau kemampuan Bursa yang mengakibatkan sistem perdagangan Efek di Bursa tidak berfungsi sebagaimana mestinya, peristiwa dan atau keadaan mana termasuk tetapi tidak terbatas pada perang baik yang dinyatakan secara resmi maupun tidak resmi, pemberontakan, kebakaran, banjir, gempa bumi, huru-hara, sabotase, pemogokan, larangan atau pembatasan yang dikeluarkan oleh Pemerintah, dan peristiwa atau keadaan lainnya yang sejenis."
+    },
+    {
+        "term": "Fraksi Harga",
+        "definition": "Satuan perubahan harga saham dalam aktivitas tawar menawar di Pasar Reguler. Fraksi Harga merupakan salah satu persyaratan yang diatur sebagai syarat-syarat Perdagangan di pasar reguler."
+    },
+    {
+        "term": "Go Private",
+        "definition": "Perubahan status perusahaan dari perusahaan terbuka menjadi perusahaan tertutup."
+    },
+    {
+        "term": "Go Public (penawaran umum saham)",
+        "definition": "Penawaran umum (saham atau obligasi) yang dilakukan perusahaan kepada publik."
+    },
+    {
+        "term": "Growth Stock",
+        "definition": "Saham suatu perseroan yang sudah memperlihatkan perolehan penghasilan yang lebih cepat dari rata-rata selama beberapa tahun terakhir dan diharapkan akan mempertunjukkan tingkat pertumbuhan laba yang tinggi. Dalam jangka panjang, saham unggul cenderung berkinerja lebih daripada saham yang tumbuh lebih lambat atau bahkan tidak tumbuh. Tetapi saham unggul merupakan investasi yang lebih berisiko daripada saham rata-rata, karena biasanya saham seperti itu memiliki rasio harga/laba yang lebih tinggi, dan tidak atau hanya sedikit membayar dividen kepada pemegang saham ."
+    },
+    {
+        "term": "Hak Memesan Efek Terlebih Dahulu (HMETD)",
+        "definition": "Hak yang melekat pada saham yang memungkinkan para pemegang saham yang ada untuk membeli Efek baru, termasuk saham, Efek yang dapat dikonversikan menjadi saham dan waran, sebelum ditawarkan kepada Pihak lain. Hak tersebut harus dapat dialihkan."
+    },
+    {
+        "term": "Halting",
+        "definition": "Penghentian sementara perdagangan atas suatu saham di Bursa Efek, karena terjadi kenaikan/penurunan harga yang signifikan tanpa didukung adanya informasi yang relevan."
+    },
+    {
+        "term": "Harga",
+        "definition": "Sejumlah nilai dalam mata uang rupiah yang terbentuk berdasarkan penjumpaan penawaran jual dan permintaan beli Efek yang dilakukan oleh Anggota Bursa Efek di Bursa."
+    },
+    {
+        "term": "Harga Dasar",
+        "definition": "Harga suatu saham yang dijadikan dasar untuk menghitung indeks. Harga dasar akan disesuaikan apabila terjadi penambahan jumlah saham yang beredar."
+    },
+    {
+        "term": "Harga Pembukaan",
+        "definition": "Harga yang terbentuk pada saat periode Pra-pembukaan."
+    },
+    {
+        "term": "Harga Penutupan (closing price)",
+        "definition": "Harga yang terbentuk berdasarkan penjumpaan penawaran jual dan permintaan beli Efek yang dilakukan oleh Anggota Bursa Efek yang tercatat pada akhir jam perdagangan di Pasar Reguler."
+    },
+    {
+        "term": "Harga Previous",
+        "definition": "Harga Penutupan pada Hari Bursa sebelumnya yang menjadi patokan pada Pra-pembukaan, atau pada pembukaan perdagangan."
+    },
+    {
+        "term": "Harga Teoritis",
+        "definition": "Sejumlah nilai yang dihitung berdasarkan rasio pembagian dividen saham, saham bonus, penerbitan Hak Memesan Efek Terlebih Dahulu, Waran, Stock Split, Reverse Stock, penggabungan usaha atau peleburan usaha Perusahaan Tercatat, dan Corporate Action lainnya yang ditetapkan oleh Perusahaan Tercatat."
+    },
+    {
+        "term": "Hari Bursa",
+        "definition": "Hari diselenggarakannya perdagangan Efek di Bursa yaitu hari Senin sampai dengan hari Jum’at, kecuali hari tersebut merupakan hari libur nasional atau dinyatakan sebagai hari libur Bursa oleh Bursa."
+    },
+    {
+        "term": "Ijin Perseorangan (Individual License)",
+        "definition": "ljin yang diberikan kepada perorangan untuk menjalankan kegiatan usaha, misalnmya sebagai wakil penjamin emisi efek, wakil perantara-pedagang efek atau Penasehat Investasi."
+    },
+    {
+        "term": "Indeks Harga Saham",
+        "definition": "Indikator pergerakan harga saham yang menggambarkan trend pergerakan pasar saham."
+    },
+    {
+        "term": "Info Memo",
+        "definition": "Dokumen tertulis yang memuat seluruh informasi didalam Prospektus Awal dan informasi tambahan lain yang tidak bersifat material, jika ada, dan ditulis dalam bahasa lain selain Bahasa Indonesia, serta dapat dibuat dalam format yang berbeda."
+    },
+    {
+        "term": "Informasi atau Fakta Material",
+        "definition": "Informasi atau fakta penting dan relevan mengenai peristiwa, kejadian, atau fakta yang dapat mempengaruhi harga Efek pada Bursa Efek dan atau keputusan pemodal, calon pemodal, atau Pihak lain yang berkepentingan atas informasi atau fakta tersebut."
+    },
+    {
+        "term": "Jakarta",
+        "definition": "Automated Trading System (JATS)Sistem perdagangan Efek yang berlaku di Bursa untuk perdagangan yang dilakukan secara otomasi dengan menggunakan sarana komputer."
+    },
+    {
+        "term": "Jakarta Option Trading System (JOTS)",
+        "definition": "JATS yang difungsikan khusus untuk perdagangan Opsi Saham."
+    },
+    {
+        "term": "Jakarta Stock Exchange Open Network Environment Client (JONEC)",
+        "definition": "Sarana di Anggota Bursa Efek yang terdiri dari perangkat lunak dan perangkat keras yang digunakan oleh Anggota Bursa Efek untuk mengakses JATS melalui Jaringan dan Terminal Remote Trading sesuai dengan Panduan Remote Trading."
+    },
+    {
+        "term": "Jakarta Stock Exchange Open Network Environment Server (JONES)",
+        "definition": "Sarana di Bursa yang terdiri dari perangkat lunak dan perangkat keras yang digunakan oleh Bursa untuk meneruskan pesanan jual dan atau permintaan beli dari Anggota Bursa Efek ke JATS sesuai dengan Panduan Remote Trading."
+    },
+    {
+        "term": "JOTS Trader",
+        "definition": "Pegawai Anggota Bursa Efek yang telah lulus pelatihan perdagangan Opsi Saham yang diselenggarakan Bursa dan didaftarkan di Bursa untuk mewakili Anggota Bursa Efek dalam melaksanakan perdagangan Efek di Bursa melalui JOTS sesuai dengan Peraturan Bursa."
+    },
+    {
+        "term": "Kepemilikan Manfaat (Beneficial Ownership) Atas Efek",
+        "definition": "Hak pemegang rekening Efek atas manfaat tertentu berkaitan dengan Efek yang dicatat dalam Penitipan Kolektif dalam rekening Efek pada Perusahaan Efek, Bank Kustodian atau Lembaga Penyimpanan dan Penyelesaian, yang timbul dari kontrak rekening Efek antara pemegang rekening dan Kustodian tersebut, Undang-undang Nomor 8 Tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya termasuk peraturan ini."
+    },
+    {
+        "term": "Kepemilikan Terdaftar (Registered Ownership) Atas Efek",
+        "definition": "Hak pemegang Efek terhadap Emiten Efek tersebut berkaitan dengan Efek yang terdaftar dalam buku Emiten atas nama pemegang Efek."
+    },
+    {
+        "term": "Kliring",
+        "definition": "Proses penentuan hak dan kewajiban yang timbul dari Transaksi Bursa"
+    },
+    {
+        "term": "Komisaris Independen",
+        "definition": "Anggota komisaris Perusahaan Tercatat yang memenuhi persyaratan sebagai berikut:"
+    },
+    {
+        "term": "Komite Audit",
+        "definition": "Komite yang dibentuk oleh Dewan Komisaris Perusahaan Tercatat yang anggotanya diangkat dan diberhentikan oleh Dewan Komisaris Perusahaan Tercatat untuk membantu Dewan Komisaris Perusahaan Tercatat melakukan pemeriksaan atau penelitian yang dianggap perlu terhadap pelaksanaan fungsi direksi dalam pengelolaan Perusahaan Tercatat."
+    },
+    {
+        "term": "Kontrak Investasi Kolektif",
+        "definition": "Kontrak antara Manajer Investasi dan Bank Kustodian yang mengikat pemegang Unit Penyertaan dimana Manajer Investasi diberi wewenang untuk mengelola portofolio investasi kolektif dan Bank Kustodian diberi wewenang untuk melaksanakan Penitipan Kolektif."
+    },
+    {
+        "term": "Kontrak Opsi Saham (KOS)",
+        "definition": "Satuan perdagangan Opsi Saham yang ditetapkan dalam satu satuan kontrak."
+    },
+    {
+        "term": "Kreditur Awal (Originator)",
+        "definition": "Pihak yang telah mengalihkan aset keuangannya kepada para pemegang Efek Beragun Aset secara kolektif dimana aset keuangan tersebut diperoleh Pihak yang bersangkutan karena pemberian pinjaman, penjualan, dan pemberian jasa lain yang berkaitan dengan usahanya."
+    },
+    {
+        "term": "Kuasi Reorganisasi",
+        "definition": "Prosedur akuntansi yang mengatur perusahaan merestrukturisasi ekuitasnya dengan menghilangkan defisit dan menilai kembali seluruh aktiva dan kewajibannya, tanpa melalui reorganisasi secara hukum. Dengan ini diharapkan perusahaan bisa meneruskan usahanya secara lebih baik, seolah-olah seperti mulai dari awal yang baik (fresh start), dengan neraca yang menunjukkan nilai sekarang dan tanpa dibebani defisit. (PSAK No. 51)"
+    },
+    {
+        "term": "Kurs Saham",
+        "definition": "Nilai harga saham tertentu pada saat tertentu."
+    },
+    {
+        "term": "Kustodian",
+        "definition": "Pihak yang memberikan jasa penitipan Efek dan harta lain yang berkaitan dengan Efek serta jasa lain, termasuk menerima dividen, bunga, dan hak-hak lain, menyelesaikan transaksi Efek, dan mewakili pemegang rekening yang menjadi nasabahnya."
+    },
+    {
+        "term": "Kustodian Sentral Efek Indonesia (KSEI)",
+        "definition": "Perseroan yang berkedudukan di Jakarta yang telah memperoleh izin usaha dari Bapepam sebagai pihak yang menyelenggarakan kegiatan Kustodian sentral bagi Bank Kustodian, Perusahaan Efek dan Pihak lain, dan perseroan tersebut berdasarkan perjanjian dengan Bursa memberikan jasa Kustodian sentral dan penyelesaian atas Transaksi Bursa."
+    },
+    {
+        "term": "Laporan Keuangan",
+        "definition": "Laporan yang berisi informasi keuangan perusahaan yang terdiri dari komponen-komponen Neraca, Laporan Laba Rugi, Laporan Perubahan Ekuitas, Laporan Arus Kas, dan Catatan Atas Laporan Keuangan."
+    },
+    {
+        "term": "Laporan Keuangan Auditan",
+        "definition": "Laporan Keuangan yang telah diaudit yang disertai opini dan telah ditandatangani oleh akuntan publik yang terdaftar di Bapepam."
+    },
+    {
+        "term": "Laporan Keuangan Interim",
+        "definition": "Laporan Keuangan triwulan I, Laporan Keuangan tengah tahunan dan Laporan Keuangan triwulan III."
+    },
+    {
+        "term": "Lembaga Kliring dan Penjaminan (LKP)",
+        "definition": "Lembaga yang menyelenggarakan jasa kliring dan penjaminan penyelesaian transaksi bursa. Lembaga ini didirikan dengan tujuan agar transaksi bursa dapat terlaksana secara teratur, wajar, dan efisien. Saat ini lembaga ini diselenggarakan oleh PT Kliring dan Penjaminan Efek Indonesia atau disingkat KPEI."
+    },
+    {
+        "term": "Lembaga Penyimpanan dan Penyelesaian (LPP)",
+        "definition": "Lembaga yang menyelenggarakan jasa penyimpanan dan penyelesaian dengan tujuan agar transaksi bursa berjalan teratur, wajar, dan efisien. Sebagai SRO, LPP menetapkan peraturan mengenai kegiatan penyimpanan dan penyelesaian transaksi bursa termasuk ketentuan mengenai pemakaian biaya jasa."
+    },
+    {
+        "term": "Limit Order (amanat terbatas)",
+        "definition": "Amanat jual/beli efek tertentu dari suatu perusahaan yang dilaksanakan pada batas harga yang ditetapkan atau amanat jual beli sekuritas pada batas harga tertentu."
+    },
+    {
+        "term": "Lock Up",
+        "definition": "Suatu intilah yang menunjukkan bahwa suatu surat berharga atau saham tidak boleh diperjualbelikan dalam kurun waktu tertentu."
+    },
+    {
+        "term": "LQ45",
+        "definition": "Indeks atas 45 emiten yang tercatat di Bursa Efek Jakarta dengan mengambil likuiditas dan nilai kapitalisasi pasar sebagai tolok ukur."
+    },
+    {
+        "term": "Management Stock Option Program (MSOP)",
+        "definition": "Program kepemilikan saham oleh Direksi dan Komisaris yang dilakukan melalui Penawaran Saham atau Penawaran Opsi Saham dalam rangka kompensasi kepada Direksi dan Komisaris."
+    },
+    {
+        "term": "Manajer Investasi",
+        "definition": "Pihak yang kegiatan usahanya mengelola Portofolio Efek untuk para nasabah atau mengelola portofolio investasi kolektif untuk sekelompok nasabah, kecuali perusahaan asuransi, dana pensiun, dan bank yang melakukan sendiri kegiatan usahanya berdasarkan peraturan perundang-undangan yang berlaku."
+    },
+    {
+        "term": "Margin Trading",
+        "definition": "Perdagangan Efek oleh nasabah dimana pembiayaannya sebagian dilakukan oleh Perantara Pedagang Efek dengan jaminan (Collateral) saham yang dibeli."
+    },
+    {
+        "term": "Market to Book Value (nilai pasar terhadap nilai buku)",
+        "definition": "Hubungan antara harga pasar saham biasa saat ini dan nilai buku yang tercatat, suatu rasio yang sering kali digunakan dalam mempertimbangkan kinerja saham perusahaan."
+    },
+    {
+        "term": "Modal Kerja Bersih Disesuaikan (MKBD)",
+        "definition": "Modal Kerja Bersih Disesuaikan sebagaimana dimaksud dalam Peraturan Bapepam Nomor V.D.5.: Tentang Pemeliharaan dan Pelaporan Modal Kerja Bersih Disesuaikan."
+    },
+    {
+        "term": "Netting",
+        "definition": "Kegiatan Kliring yang menimbulkan hak dan kewajiban bagi setiap anggota Kliring untuk menyerahkan atau menerima saldo Efek tertentu untuk setiap jenis Efek yang ditransaksikan dan untuk menerima atau membayar sejumlah uang untuk seluruh Efek yang ditransaksikan"
+    },
+    {
+        "term": "Nilai Kapitalisasi Saham",
+        "definition": "Hasil perkalian antara jumlah saham yang akan dicatatkan dengan harga saham perdana untuk perusahaan yang melakukan penawaran umum atau harga saham di Bursa untuk Perusahaan Tercatat."
+    },
+    {
+        "term": "Nilai Penawaran Secara Keseluruhan",
+        "definition": "Jumlah uang dan nilai jasa, kekayaan, surat hutang, kompensasi hutang, atau imbalan lain yang akan diterima oleh Pihak yang menawarkan sehubungan dengan penawaran Efek."
+    },
+    {
+        "term": "Obligasi (bond)",
+        "definition": "Sertifikat bukti utang dan dikeluarkan oleh suatu perseroan terbatas atau institusi tertentu baik pemerintah maupun lembaga lainnya dengan tujuan mendapatkan modal. Perusahaan membayar bunga atas obligasi tersebut pada tanggal-tanggal yg telah ditentukan secara periodik, dan pada akhirnya menebus nilai utang tersebut pada saat jatuh tempo dengan mengembalikan jumlah pokok pinjaman ditambah bunga yg terutang."
+    },
+    {
+        "term": "Obligasi Konversi",
+        "definition": "Obligasi yang memberikan hak kepada pemegangnya untuk menukarkan (konversi) obligasi tersebut dengan saham dalam waktu yang ditentukan."
+    },
+    {
+        "term": "Odd Lot",
+        "definition": "Satuan jumlah saham yang jumlahnya lebih kecil dari satuan perdagangan saham di Bursa Efek, sehingga jumlah tersebut tidak dapat diperdagangkan di pasar reguler. Satuan perdagangan di BEI adalah 500 saham."
+    },
+    {
+        "term": "Opsi Saham",
+        "definition": "Hak yang dimiliki oleh pihak untuk membeli (call option) dan atau menjual (put option) kepada pihak lain atas sejumlah saham (Underlying Stock) pada harga (Strike Price) dan dalam waktu tertentu"
+    },
+    {
+        "term": "Over the Counter Market (OTC)",
+        "definition": "Merupakan pasar di luar bursa saham di mana harga dari sekuritas ditentukan dengan sistem negosiasi (tawar menawar) antara investor dan dealer/broker."
+    },
+    {
+        "term": "Papan Pengembangan",
+        "definition": "Papan pencatatan yang disediakan untuk mencatatkan saham dari perusahaan yang memiliki Aktiva Berwujud Bersih sekurang-kurangnya Rp 5.000.000.000,- (lima miliar rupiah) dan memiliki pengalaman operasional sekurang-kurangnya 12 (dua belas) bulan."
+    },
+    {
+        "term": "Papan Utama",
+        "definition": "Papan pencatatan yang disediakan untuk mencatatkan saham dari perusahaan yang memiliki Aktiva Berwujud Bersih sekurang-kurangnya Rp 100.000.000.000,- (seratus miliar rupiah) dan memiliki pengalaman operasional sekurang-kurangnya 36 (tiga puluh enam) bulan."
+    },
+    {
+        "term": "Pasar Modal",
+        "definition": "Kegiatan yang bersangkutan dengan Penawaran Umum dan perdagangan Efek, Perusahaan Publik yang berkaitan dengan Efek yang diterbitkannya, serta lembaga dan profesi yang berkaitan dengan Efek."
+    },
+    {
+        "term": "Pasar Negosiasi",
+        "definition": "Pasar dimana perdagangan Efek di Bursa dilaksanakan berdasarkan tawar menawar langsung secara individual dan tidak secara lelang yang berkesinambungan (Non Continuous Auction Market) dan penyelesaiannya dapat dilakukan berdasarkan kesepakatan Anggota Bursa Efek."
+    },
+    {
+        "term": "Pasar Reguler",
+        "definition": "Pasar dimana perdagangan Efek di Bursa dilaksanakan berdasarkan proses tawar-menawar secara lelang yang berkesinambungan (continuous auction market) oleh Anggota Bursa Efek melalui JATS dan penyelesaiannya dilakukan pada Hari Bursa ke-3 setelah terjadinya Transaksi Bursa (T+3)."
+    },
+    {
+        "term": "Pasar Reguler Tunai (Pasar Tunai)",
+        "definition": "Pasar dimana perdagangan Efek di Bursa dilaksanakan berdasarkan proses tawar-menawar secara lelang yang berkesinambungan (continuous auction market) oleh Anggota Bursa Efek melalui JATS dan penyelesaiannya dilakukan pada Hari Bursa yang sama dengan terjadinya Transaksi Bursa (T+0)."
+    },
+    {
+        "term": "Peleburan Usaha",
+        "definition": "Perbuatan hukum yang dilakukan oleh 2 (dua) Perseroan atau lebih untuk meleburkan diri dengan cara membentuk 1 (satu) Perseroan baru dan masing-masing Perseroan menjadi bubar."
+    },
+    {
+        "term": "Pemegang Saham Independen",
+        "definition": "Pemegang saham yang tidak mempunyai Benturan Kepentingan sehubungan dengan suatu Transaksi tertentu."
+    },
+    {
+        "term": "Pemegang Saham Pengendali",
+        "definition": "Pemegang saham yang memiliki 25% (dua puluh lima perseratus) atau lebih saham perusahaan, atau pemegang saham yang memiliki kemampuan dengan cara apapun mempengaruhi pengelolaan dan atau kebijaksanaan perusahaan meskipun jumlah saham yang dimiliki kurang dari 25% (dua puluh lima perseratus)."
+    },
+    {
+        "term": "Pemegang Saham Utama",
+        "definition": "Setiap Pihak, baik secara langsung maupun tidak langsung, memiliki sekurangnya-kurangnya 25 % (dua puluh lima perseratus) hak suara dari seluruh saham yang mempunyai hak suara yang dikeluarkan oleh suatu Perseroan."
+    },
+    {
+        "term": "Penanggung Jawab Pesanan dan Perdagangan (PJPP)",
+        "definition": "Pihak yang ditunjuk oleh Anggota Bursa Efek atau Perusahaan Efek yang mengajukan permohonan sebagai Anggota Bursa Efek dan didaftarkan di Bursa yang bertanggung jawab atas penawaran jual dan atau permintaan beli untuk dapat masuk ke JATS."
+    },
+    {
+        "term": "Penasihat Investasi",
+        "definition": "Pihak yang memberi nasihat kepada Pihak lain mengenai penjualan atau pembelian Efek dengan memperoleh imbalan jasa."
+    },
+    {
+        "term": "Penawaran Efek",
+        "definition": "Semua penawaran untuk menjual atau memberi kesempatan untuk membeli Efek yang terjadi dalam jangka waktu yang terpisah dari Penawaran Efek sebelumnya atau selanjutnya, dalam jangka waktu sekurang-kurangnya 12 (dua belas) bulan."
+    },
+    {
+        "term": "Penawaran Tender",
+        "definition": "Penawaran melalui Media Massa untuk memperoleh Efek Bersifat Ekuitas dengan cara pembelian atau pertukaran dengan Efek lainnya ."
+    },
+    {
+        "term": "Penawaran Umum",
+        "definition": "Kegiatan penawaran Efek yang dilakukan oleh Emiten untuk menjual Efek kepada masyarakat berdasarkan tata cara yang diatur dalam Undang-undang ini dan peraturan pelaksanaannya."
+    },
+    {
+        "term": "Pencatatan (Listing)",
+        "definition": "Pencantuman suatu Efek dalam daftar Efek yang tercatat di Bursa sehingga dapat diperdagangkan di Bursa."
+    },
+    {
+        "term": "Penggabungan Usaha",
+        "definition": "Perbuatan hukum yang dilakukan oleh 1 (satu) Perseroan atau lebih untuk menggabungkan diri dengan Perseroan lain yang telah ada dan selanjutnya Perseroan yang menggabungkan diri menjadi bubar."
+    },
+    {
+        "term": "Penitipan Kolektif",
+        "definition": "Jasa penitipan atas Efek yang dimiliki bersama oleh lebih dari satu Pihak yang kepentingannya diwakili oleh Kustodian."
+    },
+    {
+        "term": "Penjamin Emisi Efek",
+        "definition": "Pihak yang membuat kontrak dengan emiten untuk melakukan Penawaran Umum bagi kepentingan emiten dengan atau tanpa kewajiban untuk membeli sisa efek yang tidak terjual.Tugas Penjamin Emisi Efek:"
+    },
+    {
+        "term": "Penjamin Pelaksana Emisi Efek",
+        "definition": "Satu atau lebih penjamin emisi efek yang ditunjuk diantara Penjamin Utama Emisi Efek dalam sindikat Penjamin Emisi Efek yang bertanggung jawab dalam sindikat penjamin efek yang bertanggung jawab datam pengelolaan serta penyelenggaraan emisi efek."
+    },
+    {
+        "term": "Penjatahan (allotment)",
+        "definition": "Alokasi atas penjualan saham baru kepada para pemesan di pasar perdana apabila jumlah saham yang dipesan lebih besar dari jumlah saham yang ditawarkan."
+    },
+    {
+        "term": "Per-transaksi (trade for trade)",
+        "definition": "Penentuan pemenuhan hak dan kewajiban untuk setiap transaksi oleh Anggota Bursa Efek jual dan Anggota Bursa Efek beli yang dilakukan secara langsung atas Efek yang ditransaksikan."
+    },
+    {
+        "term": "Perantara Pedagang Efek",
+        "definition": "Pihak yang melakukan kegiatan usaha jual beli Efek untuk kepentingan sendiri atau Pihak lain."
+    },
+    {
+        "term": "Perdagangan Tanpa Warkat (scripless trading)",
+        "definition": "Suatu perdagangan saham yang penyelesaian transaksinya tidak lagi menggunakan sertifikat saham secara fisik. Setiap kali terjadi transaksi, mutasi saham dan uang, cukup dilakukan melalui pemindahbukuan pada rekening pihak-pihak yang terlibat dalam transaksi seperti layaknya rekening di bank."
+    },
+    {
+        "term": "Pernyataan Pendaftaran",
+        "definition": "Dokumen yang wajib disampaikan kepada Badan Pengawas Pasar Modal-Lembaga Keuangan (BAPEPAM-LK) oleh Emiten dalam rangka Penawaran Umum atau Perusahaan Publik."
+    },
+    {
+        "term": "Persetujuan Keanggotaan Bursa",
+        "definition": "Persetujuan untuk menjadi Anggota Bursa Efek yang diberikan oleh Bursa dengan Surat Persetujuan Anggota Bursa Efek (SPAB)."
+    },
+    {
+        "term": "Perusahaan Baru Hasil Peleburan Usaha (PBHLU)",
+        "definition": "Perusahaan baru hasil peleburan usaha dimana seluruh atau sebagian dari pesertanya adalah Perusahaan Tercatat dan proses peleburan usahanya telah selesai sesuai dengan peraturan perundang-undangan yang berlaku."
+    },
+    {
+        "term": "Perusahaan Baru Hasil Penggabungan Usaha (PBHPU)",
+        "definition": "Perusahaan penerima penggabungan usaha yang berasal dari perusahaan yang sahamnya tidak tercatat di Bursa dimana satu atau lebih peserta penggabungan usaha adalah Perusahaan Tercatat dan proses penggabungan usahanya telah selesai sesuai dengan peraturan perundang-undangan yang berlaku."
+    },
+    {
+        "term": "Perusahaan Efek",
+        "definition": "Pihak yang melakukan kegiatan usaha sebagai Penjamin Emisi Efek, Perantara Pedagang Efek, dan atau Manajer Investasi."
+    },
+    {
+        "term": "Perusahaan Publik",
+        "definition": "Perseroan yang sahamnya telah dimiliki sekurang-kurangnya oleh 300 (tiga ratus) pemegang saham dan memiliki modal disetor sekurang-kurangnya Rp3.000.000.000,00 (tiga miliar rupiah) atau suatu jumlah pemegang saham dan modal disetor yang ditetapkan dengan Peraturan Pemerintah."
+    },
+    {
+        "term": "Perusahaan Tercatat",
+        "definition": "Emiten atau Perusahaan Publik yang Efeknya tercatat di Bursa."
+    },
+    {
+        "term": "Perusahaan Tercatat Hasil Penggabungan Usaha (PHPU)",
+        "definition": "Perusahaan Tercatat yang menerima penggabungan usaha dari Perusahaan Tercatat lainnya dan/atau dari perusahaan yang tidak tercatat di Bursa dan proses penggabungan usahanya telah selesai sesuai dengan peraturan perundang-undangan yang berlaku."
+    },
+    {
+        "term": "Perusahaan Terkendali",
+        "definition": "Suatu perusahaan yang dikendalikan baik secara langsung maupun tidak langsung oleh Perusahaan."
+    },
+    {
+        "term": "Pra-pembukaan",
+        "definition": "Periode sebelum dimulainya jam perdagangan pada setiap Hari Bursa dimana setiap Anggota Bursa Efek mempunyai kesempatan untuk memasukkan penawaran jual dan atau permintaan beli suatu Efek sehingga dimungkinkan terjadinya pembentukan Harga Pembukaan atas Efek tersebut."
+    },
+    {
+        "term": "Price & Time Priority",
+        "definition": "Prioritas dalam melakukan transaksi efek di Bursa Efek (di Pasar Reguler), dimana pihak yang menawarkan harga paling tinggi untuk membeli atau paling rendah untuk menjual akan mendapatkan prioritas dalam suatu transaksi, sementara penawaran pada harga yang sama baik untuk beli maupun untuk jual, prioritas diberikan kepada siapa yang lebih dahulu memasukkan penawaran tersebut."
+    },
+    {
+        "term": "Price Earning Ratio (PER)",
+        "definition": "Rasio antara harga saham dibandingkan dengan keuntungan perusahaan yang dapat didistribusikan untuk setiap saham yang dimiliki (EPS)."
+    },
+    {
+        "term": "Primary Market (pasar perdana)",
+        "definition": "Penjualan perdana emisi efek setelah memperoleh izin emisi dari Ketua BAPEPAM-LK. Pembelian efek pada pasar perdana dapat dilakukan melalui Underwriter atau Selling agentnya dengan membawa tanda bukti diri."
+    },
+    {
+        "term": "Prinsip Keterbukaan (full discosure)",
+        "definition": "Pedoman umum yang mensyaratkan Emiten, Perusahaan Publik, dan pihak lain yang tunduk pada Undang-undang untuk menginformasikan kepada masyarakat dalam waktu yang tepat seluruh informasi Material mengenai usahanya atau Efeknya yang dapat berpengaruh terhadap keputusan pemodal terhadap Efek dimaksud dan atau harga dari Efek tersebut."
+    },
+    {
+        "term": "Profesi Penunjang Pasar Modal",
+        "definition": "Lembaga profesi yang banyak terlibat dan berperan bagi pengembangan pasar modal. Lembaga-lembaga tersebut tercatat dan terdaftar di Bapepam. Lembaga tersebut antara lain:"
+    },
+    {
+        "term": "Profitability Ratio (rasio kemampulabaan atau rentabilitas)",
+        "definition": "Menggambarkan kemampuan perusahaan menghasilkan laba dengan kemampuan dan sumber yang dimiliki."
+    },
+    {
+        "term": "Prospektus",
+        "definition": "Setiap informasi tertulis sehubungan dengan Penawaran Umum dengan tujuan agar Pihak lain membeli Efek."
+    },
+    {
+        "term": "Prospektus Awal",
+        "definition": "Dokumen tertulis yang memuat seluruh informasi dalam Prospektus yang disampaikan kepada Bapepam sebagai bagian dari Pernyataan Pendaftaran, kecuali informasi mengenai nilai nominal, jumlah dan harga penawaran Efek, penjaminan emisi Efek, tingkat bunga obligasi, atau hal-hal lain yang berhubungan dengan persyaratan penawaran yang belum dapat ditentukan."
+    },
+    {
+        "term": "Public Expose",
+        "definition": "Suatu pemaparan umum kepada publik untuk menjelaskan mengenai kinerja Perusahaan Tercatat dengan tujuan agar informasi mengenai kinerja perusahaan tersebut tersebar secara merata."
+    },
+    {
+        "term": "Quick Ratio (rasio cepat)",
+        "definition": "Rasio ini menunjukkan kemampuan aktiva lancar yang paling likuid (dengan mengeluarkan pos persediaan dan uangmuka biaya dari aktiva lancar) mampu membiayai hutang lancar. Quick ratio atau rasio cepat dapat dihitung dengan rumus: (Aktiva Lancar – Persediaan) / Utang Lancar"
+    },
+    {
+        "term": "Quotation (catatan harga efek)",
+        "definition": "Harga permintaan tertinggi dan harga penawaran terendah dari suatu sekuritas atau suatu komoditi."
+    },
+    {
+        "term": "Recording Date",
+        "definition": "Tanggal yang merupakan tanggal terakhir dari pendaftaran atas pemilikan saham dalam Daftar Pemegang Saham perusahaan. Pendaftaran ini biasanya berhubungan dengan pembagian dividen, right issue, pemberian saham bonus/dividen saham dan hak untuk hadir dalam Rapat Umum Pemegang Saham."
+    },
+    {
+        "term": "Rekening Titipan",
+        "definition": "Sejenis rekening Efek pada Kustodian yang dimaksudkan untuk menyimpan Efek yang tidak termasuk dalam Penitipan Kolektif yang sewaktu-waktu dapat ditarik kembali atau dipindahkan dalam ujud semula sesuai perintah pemegang rekening"
+    },
+    {
+        "term": "Reksa Dana",
+        "definition": "Wadah yang dipergunakan untuk menghimpun dana dari masyarakat pemodal untuk selanjutnya diinvestasikan dalam Portofolio Efek oleh Manajer Investasi."
+    },
+    {
+        "term": "Reksa Dana Campuran",
+        "definition": "Reksa Dana yang melakukan investasi dalam Efek Bersifat Ekuitas dan Efek bersifat utang yang perbandingannya tidak termasuk Reksa Dana Pendapatan Tetap dan Reksa Dana Saham"
+    },
+    {
+        "term": "Reksa Dana Pasar Uang",
+        "definition": "Reksa Dana yang hanya melakukan investasi pada Efek bersifat utang dengan jatuh tempo kurang dari 1 (satu) tahun."
+    },
+    {
+        "term": "Reksa Dana Pendapatan Tetap",
+        "definition": "Reksa Dana yang melakukan investasi sekurang-kurangnya 80% (delapan puluh perseratus) dari aktivanya dalam bentuk Efek bersifat utang."
+    },
+    {
+        "term": "Reksa Dana Saham",
+        "definition": "Reksa Dana yang melakukan investasi sekurang-kurangnya 80 % (delapan puluh perseratus) dari aktivanya dalam Efek Bersifat Ekuitas."
+    },
+    {
+        "term": "Remote Trading",
+        "definition": "Sistem perdagangan Efek yang diselenggarakan oleh Bursa bagi Anggota Bursa Efek melalui Jaringan."
+    },
+    {
+        "term": "Repurchasing Agreement (REPO)",
+        "definition": "Transaksi dimana Perantara Pedagang Efek menjual Efek kepada nasabah atau pihak lain dengan harga yang telah ditentukan dan akan membeli kembali Efek yang sejenis pada tanggal tertentu dengan harga yang sama ditambah bunga atau dengan harga yang lebih tinggi."
+    },
+    {
+        "term": "Return on Equity/ROE (pengembalian atas kekayaan bersih)",
+        "definition": "Hubungan laba tahunan setelah pajak terhadap ekuitas pemegang saham yang tercatat. Rasio ini digunakan sebagai ukuran efektivitas dana pemegang saham yang telah diinvestasikan."
+    },
+    {
+        "term": "Right Issue (Penawaran Umum Terbatas)",
+        "definition": "Merupakan salah satu bentuk peningkatan modal disetor suatu perseroan. Dalam right issue, perseroan menawarkan hak (right) kepada pemegang saham yang ada untuk mendapatkan saham baru yang tentu saja berarti menyetor modal dengan rasio tertentu. Jika pemegang saham tersebut tidak mengambil haknya, maka ia dapat menjual hak-nya tersebut kepada investor lain. Dengan demikian di pasar modal juga dikenal perdagangan right. Jadi right adalah hak yang diberikan kepada pemegang saham lama untuk terlebih dahulu membeli saham yang baru dikeluarkan dengan tujuan agar para pemegang saham lama diberi kesempatan untuk mempertahankan persentase kepemilikannya dalam suatu perusahaan."
+    },
+    {
+        "term": "Road Show",
+        "definition": "Kegiatan dimana emiten bersama dengan pihak-pihak terlibat lainnya (mis: underwriter) memperkenalkan efek dan perusahaannya biasanya kepada investor asing (investor institusional) dengan berkunjung dan bertemu dengan pihak-pihak tersebut sehingga diharapkan mampu meningkatkan penjualan saham pada saat pasar perdana."
+    },
+    {
+        "term": "Saham (stock)",
+        "definition": "Bukti penyertaan modal di suatu perusahaan, atau merupakan bukti kepemilikan atas suatu perusahaan."
+    },
+    {
+        "term": "Saham Bonus",
+        "definition": "Saham yang diberikan secara cuma-cuma oleh Emiten kepada pemegang saham, yang merupakan kapitalisasi dari Agio Saham."
+    },
+    {
+        "term": "Saham Induk (Underlying Stock)",
+        "definition": "Saham Perusahaan Tercatat yang menjadi dasar perdagangan seri KOS."
+    },
+    {
+        "term": "Sarana Peningkatan Kredit/Arus Kas",
+        "definition": "Sarana yang bertujuan untuk meningkatkan kualitas portofolio investasi kolektif dalam rangka pembayaran kepada pemegang Efek Beragun Aset, termasuk:"
+    },
+    {
+        "term": "Sertifikat Penitipan Efek Indonesia",
+        "definition": "Efek yang memberikan hak kepada pemegangnya atas Efek Utama yang dititipkan secara kolektif pada Bank Kustodian yang telah mendapat persetujuan BAPEPAM-LK."
+    },
+    {
+        "term": "Sinking Fund",
+        "definition": "Pembayaran secara bertahap atas seluruh atau sebagian nilai obligasi sebelum jatuh tempo, yang sudah direncanakan jadwal pengembaliannya oleh pihak emiten."
+    },
+    {
+        "term": "Stock Split (pemecahan saham)",
+        "definition": "Pemecahan nilai nominal saham sehingga menjadi lebih kecil. Pemecahan saham berimplikasi pemecahan harga saham sesuai dengan rasio split. Jumlah saham beredar akan meningkat sesuai dengan rasio split."
+    },
+    {
+        "term": "Suspend (suspensi)",
+        "definition": "Penghentian sementara perdagangan suatu saham di Bursa Efek. Penghentian ini dapat disebabkan karena permintaan Emiten sendiri atau merupakan keputusan Bursa dalam rangka memberikan perlindungan kepada investor atau dapat pula karena pengenaan sanksi oleh Bursa Efek kepada suatu Emiten."
+    },
+    {
+        "term": "Technical Analysis (analisis teknikal)",
+        "definition": "Salah satu metode analisis investasi yang menggunakan grafik dan bagan yang menelusuri secara historis harga dan jumlah perputaran suatu efek tertentu dalam jangka waktu tertentu."
+    },
+    {
+        "term": "Tender Offer",
+        "definition": "Suatu proses penawaran pembelian saham yang hendak dilakukan oleh seorang investor atau sebuah perusahaan yang akan membeli saham suatu perusahaan yang tercatat di bursa efek (perusahaan publik) dalam jumlah tertentu."
+    },
+    {
+        "term": "Total Aktiva",
+        "definition": "Total sumber daya yang dikuasai oleh perusahaan sebagai akibat dari peristiwa masa lalu dan dari manfaat ekonomi di masa depan yang diharapkan akan diperoleh perusahaan."
+    },
+    {
+        "term": "Total Kewajiban",
+        "definition": "Total tanggungjawab perusahaan pada saat ini yang timbul dari peristiwa masa lalu yang penyelesaiannya diperkirakan akan membutuhkan sumber daya perusahaan."
+    },
+    {
+        "term": "Transaksi Bursa",
+        "definition": "Kontrak yang dibuat oleh Anggota Bursa Efek sesuai dengan persyaratan yang ditentukan oleh Bursa Efek mengenai jual beli Efek, pinjam-meminjam Efek, atau kontrak lain mengenai Efek atau harga Efek."
+    },
+    {
+        "term": "Transaksi di Luar Bursa",
+        "definition": "Transaksi antar Perusahaan Efek atau antara Perusahaan Efek dengan Pihak lain yang tidak diatur oleh Bursa Efek, dan transaksi antar Pihak yang bukan Perusahaan Efek."
+    },
+    {
+        "term": "Transaksi Marjin",
+        "definition": "Transaksi Bursa yang dilakukan oleh Anggota Bursa Efek untuk kepentingan nasabahnya yang penyelesaian transaksinya dibiayai oleh Anggota Bursa Efek tersebut."
+    },
+    {
+        "term": "Transaksi Nasabah Kelembagaan",
+        "definition": "Transaksi Efek antara Perusahaan Efek dengan nasabah kelembagaan tertentu yang didasarkan pada perjanjian antara Perusahaan Efek dengan nasabah kelembagaan tersebut seperti perusahaan asuransi, Reksa Dana, bank atau lembaga keuangan lainnya yang tidak mempunyai rekening Efek pada Perusahaan Efek tersebut, sebagaimana dimaksud dalam angka 5 huruf a butir 3) Peraturan Nomor V.D.3."
+    },
+    {
+        "term": "Transaksi Nasabah Pemilik Rekening",
+        "definition": "Transaksi Efek yang dilaksanakan oleh Perusahaan Efek untuk kepentingan rekening nasabahnya sesuai dengan kontrak antara Perusahaan Efek dengan nasabah tersebut, yang dibuat sesuai dengan angka 5 Peraturan Nomor V.D.3 dan angka 4 Peraturan Nomor V.D.6."
+    },
+    {
+        "term": "Transaksi Nasabah Umum",
+        "definition": "Transaksi melalui pemesanan Efek dalam Penawaran Umum oleh pemodal yang tidak mempunyai rekening Efek pada Perusahaan Efek sebagaimana dimaksud dalam angka 5 huruf a butir 3) Peraturan Nomor V.D.3."
+    },
+    {
+        "term": "Treasury Stock (saham tresuri)",
+        "definition": "Saham milik perusahaan yang sudah pernah dikeluarkan dan beredar yang kemudian dibeli kembali oleh perusahaan untuk disimpan sebagai treasuri yang nantinya dapat dijual kembali."
+    },
+    {
+        "term": "Trustee (wali amanat)",
+        "definition": "Lembaga yang ditunjuk oleh emiten yang diberi kepercayaan untuk mewakili kepentingan para pemegang obligasi."
+    },
+    {
+        "term": "Underwriter (penjamin emisi)",
+        "definition": "Lembaga penunjang pasar modal yang berperan sebagai penjamin emisi atau penjamin penjualan saham pada waktu pasar perdana.Beberapa bentuk komitmen penjaminan emisi:"
+    },
+    {
+        "term": "Unit Penyertaan",
+        "definition": "Suatu ukuran yang menunjukkan bagian kepentingan setiap Pihak dalam porfolio investasi kolektif."
+    },
+    {
+        "term": "Voting Right (Hak Suara)",
+        "definition": "Hak pemegang saham untuk mengeluarkan suara dalam Rapat Umum Pemegan Saham (RUPS)."
+    },
+    {
+        "term": "Wali Amanat",
+        "definition": "Pihak yang mewakili kepentingan pemegang Efek yang bersifat utang."
+    },
+    {
+        "term": "Waran",
+        "definition": "Efek yang diterbitkan oleh suatu perusahaan yang memberi hak kepada pemegang Efek untuk memesan saham dari perusahaan tersebut pada harga tertentu untuk 6 (enam) bulan atau lebih."
+    },
+    {
+        "term": "WPPE (Wakil Perantara Pedagang Efek)",
+        "definition": "Seseorang yang telah memperoleh Izin Perorangan sebagai WPPE dan/atau Wakil Penjamin Emisi Efek dari Bapepam dan telah mendapat persetujuan dari Bursa untuk mewakili Anggota Bursa dalam melaksanakan perdagangan Efek di Bursa Efek Indonesia sesuai dengan Peraturan Bursa."
+    },
+    {
+        "term": "XD",
+        "definition": "Suatu simbol yang biasa digunakan didalam pengumuman surat kabar untuk menunjukkan bahwa saham yang diperdagangkan adalah ex deviden (tanpa deviden). Simbol \"X\" juga digunakan untuk obligasi tanpa bunga."
+    },
+    {
+        "term": "XR",
+        "definition": "Suatu simbol yang biasa digunakan didalam pengumuman surat khabar untuk menunjukkan bahwa saham yang diperdagangkan adalah saham Ex-Right (tanpa right)."
+    },
+    {
+        "term": "XW",
+        "definition": "Suatu simbol yang biasa digunakan didalam pengumuman surat kabar untuk menunjukkan bahwa saham yang diperdagangkan adalah saham Ex-Warrants (tanpa warrants)."
+    },
+    {
+        "term": "Yield",
+        "definition": "Keuntungan yang diterima investor, baik yang berasal dari capital gain maupun dividen. Yield dinyatakan dalam persentase dari modal yang ditanamkan."
+    },
+    {
+        "term": "Yield to Maturity (hasil sampai jatuh tempo)",
+        "definition": "Tingkat pengembalian internal yang diperoleh dari obligasi yang dipegang sampai pada saat jatuh tempo. YTM juga dapat diartikan sebagai Konsep yang digunakan untuk menentukan berapa tingkat pengembalian yang diterima pemodal bila ia menginvestasikan dana pinjaman jangka panjang (obligasi) dikaitkan dengan saat jatuh temponya. Untuk itu harus diperhitungkan harga beli, nilai pelunasan, waktu jatuh tempo, tingkat bunga serta waktu diantara pembayaran bunga."
+    },
+    {
+        "term": "Zero-Coupon Bond",
+        "definition": "Obligasi yang tidak memberikan bunga secara periodik; tetapi diisue dengan diskon besar dari nilai nominal dan dibayar kembali pada waktu jatuh tempo."
+    }
+]
