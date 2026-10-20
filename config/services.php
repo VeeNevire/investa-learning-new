@@ -31,6 +31,10 @@ return [
     'investa_api' => [
         'url' => env('INVESTA_API_URL', 'http://127.0.0.1:3333/api/migrasi/'),
         'timeout' => (int) env('INVESTA_API_TIMEOUT', 10),
+        // Images and files uploaded through the old site live on its server.
+        'asset_url' => env('INVESTA_ASSET_URL', 'https://investaprima.com/public/'),
+        // Excel report the old admin linked for its three "Koordinator" menus.
+        'legacy_report_url' => env('INVESTA_LEGACY_REPORT_URL', 'http://103.241.24.180/adminTryOut/ExcelMateriTopikDetail.php'),
     ],
 
     'slack' => [

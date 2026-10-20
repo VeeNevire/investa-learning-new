@@ -74,3 +74,76 @@
         display: none;
     }
 }
+
+/*
+ * Custom cursor (components/landing/custom-cursor.tsx). Left unlayered so it
+ * wins over Tailwind's cursor utilities while it is active. Text fields keep
+ * the native text cursor.
+ */
+html.custom-cursor,
+html.custom-cursor * {
+    cursor: none;
+}
+
+html.custom-cursor :is(input, textarea, [contenteditable='true']) {
+    cursor: text;
+}
+
+.custom-cursor-layer {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+}
+
+.custom-cursor-dot,
+.custom-cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+    will-change: transform;
+}
+
+html[data-cursor-visible] :is(.custom-cursor-dot, .custom-cursor-ring) {
+    opacity: 1;
+}
+
+.custom-cursor-dot span,
+.custom-cursor-ring span {
+    display: block;
+    border-radius: 9999px;
+}
+
+.custom-cursor-dot span {
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    background: var(--color-brand);
+}
+
+.custom-cursor-ring span {
+    width: 36px;
+    height: 36px;
+    margin: -18px 0 0 -18px;
+    border: 1.5px solid color-mix(in srgb, var(--color-brand) 55%, transparent);
+    transition:
+        scale 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 0.3s,
+        border-color 0.3s;
+}
+
+html[data-cursor-hover] .custom-cursor-ring span {
+    scale: 1.6;
+    background: color-mix(in srgb, var(--color-brand) 12%, transparent);
+    border-color: color-mix(in srgb, var(--color-brand) 25%, transparent);
+}
+
+html[data-cursor-down] .custom-cursor-ring span {
+    scale: 0.75;
+}
+
+html[data-cursor-hover][data-cursor-down] .custom-cursor-ring span {
+    scale: 1.3;
+}

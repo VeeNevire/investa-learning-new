@@ -1,6 +1,75 @@
 import PageHero from '@/components/page-hero';
 import PublicLayout from '@/layouts/public-layout';
+import { AnimatePresence, motion } from 'motion/react';
+import { useState, type ReactNode } from 'react';
 
+const ease = [0.22, 1, 0.36, 1] as const;
+
+export function FaqItem({
+    question,
+    number,
+    children,
+}: {
+    question: string;
+    number?: number;
+    children: ReactNode;
+}) {
+    const [open, setOpen] = useState(false);
+
+    return (
+        <div
+            className={`rounded-2xl border border-slate-200 bg-white px-6 py-5 transition-shadow duration-300 ${
+                open ? 'shadow-soft' : ''
+            }`}
+        >
+            <button
+                type="button"
+                onClick={() => setOpen((o) => !o)}
+                aria-expanded={open}
+                className="flex w-full cursor-pointer items-start justify-between gap-4 text-left text-base font-semibold text-ink"
+            >
+                <span className="flex gap-3">
+                    {number !== undefined && <span className="text-slate-400">{number}.</span>}
+                    {question}
+                </span>
+                <motion.span
+                    animate={{ rotate: open ? 45 : 0 }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                    className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
+                        open ? 'bg-brand text-white' : 'bg-slate-100 text-slate-600'
+                    }`}
+                >
+                    <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 5v14m-7-7h14" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} />
+                    </svg>
+                </motion.span>
+            </button>
+
+            <AnimatePresence initial={false}>
+                {open && (
+                    <motion.div
+                        key="answer"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.35, ease }}
+                        className="overflow-hidden"
+                    >
+                        <motion.div
+                            initial={{ y: -8 }}
+                            animate={{ y: 0 }}
+                            exit={{ y: -8 }}
+                            transition={{ duration: 0.35, ease }}
+                            className={`pt-3 text-sm leading-relaxed text-slate-600 ${number !== undefined ? 'pl-7' : ''}`}
+                        >
+                            {children}
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
+    );
+}
 const faqs = [
     {
         question: 'Bagaimana cara melakukan pendaftaran?',
@@ -65,54 +134,21 @@ export default function Faq() {
     return (
         <PublicLayout title="FAQ">
             <PageHero title="Frequently Answer Question" />
-            <section className="pb-20">
-                <div className="mx-auto max-w-5xl space-y-3 px-6 lg:px-12">
-                    {faqs.map((faq, index) => (
-                        <details
-                            key={faq.question}
-                            className="group rounded-2xl border border-slate-200 bg-white px-6 py-5 open:shadow-soft"
-                        >
-                            <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-base font-semibold text-ink [&::-webkit-details-marker]:hidden">
-                                <span className="flex gap-3">
-                                    <span className="text-slate-400">
-                                        {index + 1}.
-                                    </span>
-                                    {faq.question}
-                                </span>
-                                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-600 transition-transform group-open:rotate-45 group-open:bg-brand group-open:text-white">
-                                    <svg
-                                        className="h-3.5 w-3.5"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            d="M12 5v14m-7-7h14"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={2.5}
-                                        />
-                                    </svg>
-                                </span>
-                            </summary>
-                            <div className="mt-3 space-y-2 pl-7 text-sm leading-relaxed text-slate-600">
-                                {faq.answer.map((line) => (
-                                    <p
-                                        key={line}
-                                        className={
-                                            line.endsWith(':')
-                                                ? 'pt-1 font-semibold text-ink'
-                                                : undefined
-                                        }
-                                    >
-                                        {line}
-                                    </p>
-                                ))}
-                            </div>
-                        </details>
+           <section className="pb-20">
+    <div className="mx-auto max-w-5xl space-y-3 px-6 lg:px-12">
+        {faqs.map((faq, index) => (
+            <FaqItem key={faq.question} question={faq.question} number={index + 1}>
+                <div className="space-y-2">
+                    {faq.answer.map((line) => (
+                        <p key={line} className={line.endsWith(':') ? 'pt-1 font-semibold text-ink' : undefined}>
+                            {line}
+                        </p>
                     ))}
                 </div>
-            </section>
+            </FaqItem>
+        ))}
+    </div>
+</section>
         </PublicLayout>
     );
 }

@@ -1,5 +1,5 @@
 import { Link, usePage } from '@inertiajs/react';
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 import {
@@ -48,6 +48,22 @@ const navLinks: NavLink[] = [
 // Past this many pixels of scroll the bar detaches into a floating pill.
 const DETACH_AFTER = 24;
 
+type Indicator = { left: number; width: number };
+
+// Every page renders its own header, so the active indicator's last position
+// is kept outside React. The next page's header starts it there and slides it
+// to the new active link.
+let lastIndicator: Indicator | null = null;
+
+// Swapping through a function keeps the previous value intact; React Compiler
+// otherwise inlines a local copy of `lastIndicator` past its reassignment.
+function swapLastIndicator(next: Indicator | null): Indicator | null {
+    const previous = lastIndicator;
+    lastIndicator = next;
+
+    return previous;
+}
+
 export default function SiteHeader() {
     const { url } = usePage();
     const [menuOpen, setMenuOpen] = useState(false);
@@ -64,6 +80,69 @@ export default function SiteHeader() {
 
     const path = url.split(/[?#]/)[0];
     const isActive = (href: string) => path === href;
+
+    const navRef = useRef<HTMLElement>(null);
+    const indicatorRef = useRef<HTMLSpanElement>(null);
+    const [indicator, setIndicator] = useState<Indicator | null>(lastIndicator);
+    const [sliding, setSliding] = useState(false);
+
+    useLayoutEffect(() => {
+        const nav = navRef.current;
+
+        if (!nav) {
+            return;
+        }
+
+        const measure = (): Indicator | null => {
+            const active = nav.querySelector<HTMLElement>(
+                '[data-nav-link][aria-current="page"]',
+            );
+
+            const navBox = nav.getBoundingClientRect();
+            const box = active?.getBoundingClientRect();
+
+            // The bar is hidden below xl, where nothing can be measured.
+            if (!box || box.width === 0) {
+                return null;
+            }
+
+            return { left: box.left - navBox.left, width: box.width };
+        };
+
+        const target = measure();
+        const from = swapLastIndicator(target);
+
+        if (from && target && from.left !== target.left) {
+            // The indicator is still at the previous page's spot. Reading its
+            // size makes the browser settle that position first, so moving it
+            // in the same frame transitions from there instead of jumping.
+            indicatorRef.current?.getBoundingClientRect();
+            setSliding(true);
+        } else {
+            setSliding(false);
+        }
+
+        setIndicator(target);
+
+        // Fonts loading or the bar changing width move the links; follow them
+        // without animating. The observer also fires once on start, before the
+        // slide above; that call is skipped so it does not cut the slide short.
+        let navWidth = nav.offsetWidth;
+        const observer = new ResizeObserver(() => {
+            if (nav.offsetWidth === navWidth) {
+                return;
+            }
+
+            navWidth = nav.offsetWidth;
+            const next = measure();
+            swapLastIndicator(next);
+            setSliding(false);
+            setIndicator(next);
+        });
+        observer.observe(nav);
+
+        return () => observer.disconnect();
+    }, [path]);
 
     // Both states add up to 80px tall (h-20, or pt-3 + h-17), so the page
     // below never jumps when the bar changes shape.
@@ -99,20 +178,38 @@ export default function SiteHeader() {
                 </Link>
 
                 <nav
+                    ref={navRef}
                     aria-label="Navigasi utama"
-                    className="hidden items-center gap-0.5 rounded-full border border-gray-200/50 bg-gray-100/80 p-1.5 xl:flex"
+                    className="relative hidden items-center gap-0.5 rounded-full border border-gray-200/50 bg-gray-100/80 p-1.5 xl:flex"
                 >
+                    {indicator && (
+                        <span
+                            ref={indicatorRef}
+                            aria-hidden="true"
+                            className={cn(
+                                'absolute top-1.5 bottom-1.5 left-0 rounded-full bg-white shadow-sm',
+                                sliding &&
+                                    'transition-[translate,width] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none',
+                            )}
+                            style={{
+                                translate: `${indicator.left}px 0`,
+                                width: indicator.width,
+                            }}
+                        />
+                    )}
+
                     {navLinks.map((link) => {
                         const linkClass = cn(
-                            'rounded-full px-3.5 py-2 text-sm font-medium whitespace-nowrap text-slate-700 transition-all duration-200 hover:bg-white hover:text-ink',
+                            'relative rounded-full px-3.5 py-2 text-sm font-medium whitespace-nowrap text-slate-700 transition-colors duration-200 hover:bg-white/60 hover:text-ink',
                             isActive(link.href) &&
-                                'bg-white text-ink shadow-sm',
+                                'text-ink hover:bg-transparent',
                         );
 
                         if (!link.children) {
                             return (
                                 <Link
                                     key={link.label}
+                                    data-nav-link
                                     href={link.href}
                                     className={linkClass}
                                     aria-current={
@@ -127,6 +224,7 @@ export default function SiteHeader() {
                         return (
                             <div key={link.label} className="group relative">
                                 <Link
+                                    data-nav-link
                                     href={link.href}
                                     className={cn(
                                         linkClass,

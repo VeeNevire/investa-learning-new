@@ -1,7 +1,7 @@
 import type { IconName } from '@/components/admin/icon';
 import admin from '@/routes/admin';
 
-export type NavItem = { label: string; slug: string };
+export type NavItem = { label: string; href: string };
 
 export type NavGroup = {
     label: string;
@@ -27,52 +27,73 @@ export const mainSections: NavSection[] = [
                 label: 'Peserta',
                 icon: 'users',
                 items: [
-                    { label: 'Data Peserta', slug: 'data-peserta' },
-                    { label: 'Card Background', slug: 'card-background' },
+                    { label: 'Data Peserta', href: admin.dataPeserta.url() },
+                    {
+                        label: 'Card Background',
+                        href: admin.cardBackground.url(),
+                    },
                 ],
             },
             {
                 label: 'Pelajaran',
                 icon: 'book',
                 items: [
-                    { label: 'Data Pelajaran', slug: 'data-pelajaran' },
-                    { label: 'Detail Latihan', slug: 'detail-latihan' },
-                    { label: 'Detail Tryout', slug: 'detail-tryout' },
-                    { label: 'Video Conference', slug: 'video-conference' },
-                    { label: 'Tambah Pelajaran', slug: 'tambah-pelajaran' },
+                    {
+                        label: 'Data Pelajaran',
+                        href: admin.dataPelajaran.url(),
+                    },
+                    {
+                        label: 'Detail Latihan',
+                        href: admin.detailLatihan.url(),
+                    },
+                    { label: 'Detail Tryout', href: admin.detailTryout.url() },
+                    {
+                        label: 'Video Conference',
+                        href: admin.videoConference.url(),
+                    },
+                    {
+                        label: 'Tambah Pelajaran',
+                        href: admin.tambahPelajaran.url(),
+                    },
                 ],
             },
             {
                 label: 'Bank Soal',
                 icon: 'database',
                 items: [
-                    { label: 'Data Soal', slug: 'data-soal' },
-                    { label: 'Tambah Soal', slug: 'tambah-soal' },
-                    { label: 'Upload Excel', slug: 'upload-excel' },
-                    { label: 'Soal Latihan', slug: 'soal-latihan' },
-                    { label: 'Soal Tryout', slug: 'soal-tryout' },
+                    { label: 'Data Soal', href: admin.dataSoal.url() },
+                    { label: 'Tambah Soal', href: admin.tambahSoal.url() },
+                    { label: 'Upload Excel', href: admin.uploadExcel.url() },
+                    { label: 'Soal Latihan', href: admin.soalLatihan.url() },
+                    { label: 'Soal Tryout', href: admin.soalTryout.url() },
                 ],
             },
             {
                 label: 'Hasil Ujian',
                 icon: 'chart',
                 items: [
-                    { label: 'Informasi Hasil', slug: 'informasi-hasil' },
-                    { label: 'Laporan Tryout', slug: 'laporan-tryout' },
+                    {
+                        label: 'Informasi Hasil',
+                        href: admin.informasiHasil.url(),
+                    },
+                    {
+                        label: 'Laporan Tryout',
+                        href: admin.laporanTryout.url(),
+                    },
                 ],
             },
             {
                 label: 'Koordinator',
                 icon: 'clipboard',
                 items: [
-                    { label: 'Materi Topik', slug: 'materi-topik' },
+                    { label: 'Materi Topik', href: admin.materiTopik.url() },
                     {
                         label: 'Materi Topik Detail',
-                        slug: 'materi-topik-detail',
+                        href: admin.materiTopikDetail.url(),
                     },
                     {
                         label: 'Summary Hasil Peserta',
-                        slug: 'summary-hasil-peserta',
+                        href: admin.summaryHasilPeserta.url(),
                     },
                 ],
             },
@@ -85,27 +106,39 @@ export const mainSections: NavSection[] = [
                 label: 'Informasi',
                 icon: 'document',
                 items: [
-                    { label: 'Data Informasi', slug: 'informasi' },
-                    { label: 'Unduh Materi', slug: 'unduh-materi' },
-                    { label: 'Unduh Peraturan', slug: 'unduh-peraturan' },
-                    { label: 'Unduh Dokumentasi', slug: 'unduh-dokumentasi' },
+                    { label: 'Data Informasi', href: admin.informasi.url() },
+                    { label: 'Unduh Materi', href: admin.unduhMateri.url() },
+                    {
+                        label: 'Unduh Peraturan',
+                        href: admin.unduhPeraturan.url(),
+                    },
+                    {
+                        label: 'Unduh Dokumentasi',
+                        href: admin.unduhDokumentasi.url(),
+                    },
                 ],
             },
             {
                 label: 'Sertifikat',
                 icon: 'badge',
                 items: [
-                    { label: 'Data Sertifikat', slug: 'data-sertifikat' },
-                    { label: 'Template', slug: 'template-sertifikat' },
-                    { label: 'Background', slug: 'background-sertifikat' },
-                    { label: 'Logo', slug: 'logo-sertifikat' },
-                    { label: 'Tanda Tangan', slug: 'tanda-tangan' },
+                    {
+                        label: 'Data Sertifikat',
+                        href: admin.dataSertifikat.url(),
+                    },
+                    { label: 'Template', href: admin.templateSertifikat.url() },
+                    {
+                        label: 'Background',
+                        href: admin.backgroundSertifikat.url(),
+                    },
+                    { label: 'Logo', href: admin.logoSertifikat.url() },
+                    { label: 'Tanda Tangan', href: admin.tandaTangan.url() },
                 ],
             },
             {
                 label: 'Buku Tamu',
                 icon: 'book2',
-                href: admin.page.url('buku-tamu'),
+                href: admin.bukuTamu.url(),
             },
         ],
     },
@@ -118,33 +151,12 @@ export const systemSection: NavSection = {
             label: 'Pengaturan',
             icon: 'cog',
             items: [
-                { label: 'Data Admin', slug: 'data-admin' },
-                { label: 'Visitor', slug: 'visitor' },
-                { label: 'Image Slide', slug: 'image-slide' },
-                { label: 'Running Text', slug: 'running-text' },
-                { label: 'Floating Video', slug: 'floating-video' },
+                { label: 'Data Admin', href: admin.dataAdmin.url() },
+                { label: 'Visitor', href: admin.visitor.url() },
+                { label: 'Image Slide', href: admin.imageSlide.url() },
+                { label: 'Running Text', href: admin.runningText.url() },
+                { label: 'Floating Video', href: admin.floatingVideo.url() },
             ],
         },
     ],
 };
-
-export const itemUrl = (item: NavItem) => admin.page.url(item.slug);
-
-// Finds the menu label for a placeholder page, e.g. "data-peserta".
-export function findNavLabel(slug: string): string | null {
-    for (const section of [...mainSections, systemSection]) {
-        for (const group of section.groups) {
-            if (group.href === admin.page.url(slug)) {
-                return group.label;
-            }
-
-            const item = group.items?.find((entry) => entry.slug === slug);
-
-            if (item) {
-                return item.label;
-            }
-        }
-    }
-
-    return null;
-}

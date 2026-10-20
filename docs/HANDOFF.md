@@ -22,7 +22,7 @@ Dokumen ini merangkum kondisi project per **15 Oktober 2026** supaya developer a
 | `npm run build` | Build aset produksi ke `public/build`. |
 | `npm run check:fix` | Lint + format (oxlint/oxfmt lewat `vp`), termasuk urutan class Tailwind. |
 | `npm run types:check` | `tsc --noEmit`. |
-| `composer test` | Pint (cek), PHPStan, lalu Pest. Saat ini 14 test lolos. |
+| `composer test` | Pint (cek), PHPStan, lalu Pest. Saat ini 59 test lolos. |
 | `php artisan wayfinder:generate --no-interaction` | Regenerasi helper route TS di `resources/js/routes` dan `resources/js/actions` setelah mengubah `routes/web.php`. |
 
 Skill/aturan agen ada di `.claude/skills` dan `.agents/skills` (isinya identik, dari Laravel Boost): Laravel best practices, Inertia React, Wayfinder, Tailwind v4, Pest.
@@ -96,20 +96,24 @@ Login admin tersedia di `/adminTryOut` dengan panel visual yang memakai `auth-la
 
 | URL | Nama route | Komponen |
 |---|---|---|
-| `/admin` | `admin.dashboard` | `pages/admin/dashboard.tsx` |
-| `/admin/{page}` (slug `[a-z-]+`) | `admin.page` | `pages/admin/page.tsx` via `Admin\AdminPageController` |
+| `/admin` | `admin.dashboard` | `pages/admin/dashboard.tsx` via `Admin\DashboardController` |
+| `/admin/<slug>` (satu route per menu, mis. `/admin/data-peserta`) | `admin.<slug>` | `pages/admin/<area>/<slug>.tsx` |
 
 - Desain dari template Stitch "Mediso" (sidebar putih + submenu bertingkat, top bar sticky, kartu putih), diwarnai ulang dengan token proyek.
-- Menu diadaptasi dari admin lama (`/adminTryOut` = login admin lama; panel lama di `/admin/*`, menu di `C:\laragon\www\InvestaLearning\resources\views\Admin\Home\index.blade.php`), **tanpa menu Berita**. Konfigurasi menu: `components/admin/admin-nav.ts` (seksi → grup → item `{ label, slug }`).
-- `pages/admin/page.tsx` mencari slug di registry `components/admin/pages/index.ts`. Slug yang tidak terdaftar menampilkan "belum tersedia".
-- Halaman per area:
-  - `components/admin/pages/participants-subjects.tsx`: data-peserta, card-background, data-pelajaran, detail-latihan, detail-tryout, video-conference, tambah-pelajaran
-  - `components/admin/pages/questions-results.tsx`: data-soal, tambah-soal, upload-excel, soal-latihan, soal-tryout, informasi-hasil, laporan-tryout, materi-topik, materi-topik-detail, summary-hasil-peserta
-  - `components/admin/pages/content-system.tsx`: informasi, unduh-materi, unduh-peraturan, unduh-dokumentasi, buku-tamu, data-sertifikat, template-sertifikat, background-sertifikat, logo-sertifikat, tanda-tangan, data-admin, visitor, image-slide, running-text, floating-video
-- Kolom tabel mengikuti view admin lama (`C:\laragon\www\InvestaLearning\resources\views\Admin\*`).
-- Komponen bersama: `components/admin/data-table.tsx` (cari, filter dropdown, paginasi, `StatusToggle`, `RowActions`), `components/admin/ui.tsx` (`Card`, `Button`, `Badge`, `Toggle`, `StatTile`, `ImagePlaceholder`, `FormField`, `demoToast`), `components/admin/icon.tsx` (ikon SVG inline).
-- **Data dummy** semua halaman: `components/admin/dummy.ts` (generator dengan seed tetap, jadi data selalu sama). Dashboard masih memakai array contohnya sendiri di `dashboard.tsx`.
-- Aksi (Simpan, Ubah, Hapus, Upload, Ekspor) hanya menampilkan toast "Mode demo"; toggle status berubah lokal saja. Tombol "Tambah Pelajaran"/"Tambah Soal" membuka halaman form.
+- Menu diadaptasi dari admin lama (`/adminTryOut` = login admin lama; panel lama di `/admin/*`, menu di `C:\laragon\www\InvestaLearning\resources\views\Admin\Home\index.blade.php`), **tanpa menu Berita**. Konfigurasi menu: `components/admin/admin-nav.ts` (seksi → grup → item `{ label, href }`, `href` dari helper Wayfinder `admin.<slugCamelCase>.url()`).
+- **Satu file per halaman** di `resources/js/pages/admin/<area>/`, dikelompokkan sesuai grup sidebar: `peserta/`, `pelajaran/`, `bank-soal/`, `hasil-ujian/`, `koordinator/`, `informasi/`, `sertifikat/`, `pengaturan/`, plus `buku-tamu.tsx`, `dashboard.tsx`, dan `api-unavailable.tsx`. Setiap halaman jadi chunk JS sendiri.
+- **Controller per area** di `app/Http/Controllers/Admin/`: `DashboardController`, `PesertaController`, `PelajaranController`, `SoalController`, `HasilController`, `KontenController`, `SertifikatController`, `SistemController`. Halaman tanpa data (Tambah Soal, Upload Excel, 3 menu Koordinator) memakai `Route::inertia`. Slug yang tidak terdaftar → 404.
+- **Semua data dari API (tahap 1, hanya baca).** Setiap controller memetakan baris API ke field yang ditampilkan saja. Password (`password`, `passg`), kode verifikasi, alamat, email, dan telepon peserta **tidak pernah** dikirim ke browser (dicek di test).
+- **Tabel di-paging di server.** Prop `table` = `{rows, meta: {page, lastPage, total, perPage, from}, query}` dibuat oleh `app/Support/AdminTable.php`: `fromPaged()` untuk endpoint yang sudah berhalaman (mis. hasil ujian, 30/halaman), `fromCollection()` untuk endpoint yang mengirim semua baris sekaligus (peserta 3.900+ baris, sertifikat 2.100+ baris) dengan cari (`?q=`), filter, dan paging di Laravel. `components/admin/data-table.tsx` meminta halaman/filter/pencarian berikutnya lewat `router.get(..., { only: ['table'] })`.
+- **Data bersama:** `app/Services/InvestaLookups.php` (jenis ujian, kelas, pelajaran; cache 1 jam), `app/Services/InvestaDirectory.php` (daftar peserta yang sudah disaring field-nya; cache 60 detik), `app/Support/ApiFormat.php` (teks soal HTML → teks biasa, tanggal, URL file situs lama).
+- **Gambar/file** (background, logo, TTD, slide, materi) ada di server situs lama: `INVESTA_ASSET_URL=https://investaprima.com/public/` + folder lama (`assets/logo/`, `assets/materi/`, dst.).
+- **Endpoint lambat** dimuat sesudah halaman (deferred props): ringkasan dashboard (dua grup paralel) dan statistik bulanan/harian Visitor (10+ detik di backend, timeout 30 detik, cache 5 menit).
+- **Materi Topik, Materi Topik Detail, Summary Hasil Peserta**: admin lama tidak punya data API untuk ini, hanya link ke laporan Excel di server lama (`INVESTA_LEGACY_REPORT_URL`). Halaman baru menampilkan tombol ke laporan yang sama.
+- **Soal Latihan/Tryout** baru tampil setelah pelajaran, jenis ujian, dan kelas dipilih (backend butuh ketiganya). **Laporan Tryout** memakai daftar paket milik admin yang login (`session('admin.id')`), seperti admin lama.
+- **Statistik viewer** (`admin/statistic/viewer_*`) mengembalikan halaman error dari backend, jadi Visitor hanya menampilkan akses per bagian.
+- Komponen bersama: `components/admin/data-table.tsx` (tabel server, `TableFooter`, `StatusToggle`, `RowActions`), `gallery.tsx`, `downloads-table.tsx`, `subject-detail-table.tsx`, `package-questions.tsx`, `legacy-report.tsx`, `cells.tsx`, `dashboard/*`, `ui.tsx` (`Card`, `Button`, `Badge`, `Toggle`, `StatTile`, `RemoteImage`, `FormField`, `demoToast`), `types.ts`, `icon.tsx`.
+- **Aksi tulis belum tersambung (tahap 2):** Simpan, Ubah, Hapus, Upload, Ekspor hanya menampilkan toast "Belum tersambung"; toggle status berubah lokal saja. Endpoint tulisnya ada di controller admin lama. Jangan uji aksi tulis ke API produksi; pakai `Http::fake`.
+- Kalau API tidak bisa dihubungi, halaman admin menampilkan `pages/admin/api-unavailable.tsx` (status 503) di dalam layout admin (`bootstrap/app.php`).
 - **Hak akses per role belum dibedakan**: nilai `access` dari API disimpan, tapi semua admin melihat menu yang sama.
 
 ## 6. Data
@@ -125,7 +129,8 @@ Login admin tersedia di `/adminTryOut` dengan panel visual yang memakai `auth-la
 - Base URL di `.env`: `INVESTA_API_URL=http://127.0.0.1:3333/api/migrasi/` (sama untuk lokal dan VPS). **Lokal** butuh SSH tunnel yang tetap terbuka: `ssh -N -L 3333:127.0.0.1:3333 <user>@<IP-VPS>`. **Di VPS** API sudah ada di 127.0.0.1:3333. Timeout: `INVESTA_API_TIMEOUT` (detik). Dibaca lewat `config('services.investa_api')`. Cek koneksi: `curl http://127.0.0.1:3333/api/migrasi/login/get_paket`.
 - Klien: `app/Services/InvestaApi.php` (facade `Http`, body form-encoded, tanpa token). Gagal koneksi → `App\Exceptions\InvestaApiUnavailable` dengan pesan ramah.
 - `admin/login`: kirim `username` + `password` **di-hash MD5** (aturan backend). Sukses bila `count > 0`; data di `data.idg`, `data.namag`, `data.access`.
-- Di test, API selalu dipalsukan dengan `Http::fake()` (lihat `tests/Feature/AdminLoginTest.php`).
+- Klien punya `get()` (GET), `read()` (endpoint baca yang hanya melayani POST: `admin/bank/soal/ListSoal/{page}`, `admin/data/soal/DataSoal`, `admin/hasil/ujian/tryout/detail`), `rows()` (ambil list baris dari respons), dan `cached()`.
+- Di test, API selalu dipalsukan dengan `Http::fake()` (lihat `tests/Feature/AdminLoginTest.php` dan `AdminPagesTest.php`).
 
 ## 7. Test
 
@@ -133,14 +138,14 @@ Login admin tersedia di `/adminTryOut` dengan panel visual yang memakai `auth-la
 - `ExampleTest.php`: `/` merender `welcome`.
 - `GlossaryTest.php`: glossary mengirim 209 istilah.
 - `PublicPagesTest.php`: semua halaman publik + login/register/forgot (komponen `auth` dengan `tab` yang benar).
-- `AdminPagesTest.php`: dashboard, halaman admin per slug (dengan `session('admin')`), tamu diarahkan ke login, slug tidak valid → 404.
+- `AdminPagesTest.php`: setiap menu admin merender komponennya dengan API palsu dan tanpa field sensitif; halaman admin hanya membaca dari API; paging/cari/filter peserta di server; skor hasil ujian; teks soal tanpa HTML; deferred props dashboard dan Visitor; API mati → 503; tamu → login; slug tak dikenal → 404.
 - `AdminLoginTest.php`: login admin lewat API palsu (sukses + MD5, salah password, server mati, logout).
 
 ## 8. Jebakan teknis (sudah pernah kejadian)
 
 1. **Sticky mati karena overflow.** Pembungkus halaman harus `overflow-x-clip`, bukan `overflow-x-hidden` (hidden membuat scroll container baru dan mematikan `position: sticky`). Kartu auth juga pakai `overflow-clip` agar panel kanan bisa sticky.
 2. **Dev server Tailwind tidak membaca file baru.** Kalau halaman baru tampil berantakan saat `composer dev` berjalan, padahal `npm run build` benar, sentuh `resources/css/app.css` (`touch`) atau restart `composer dev`. `public/hot` membuat Laravel memakai dev server, bukan build.
-3. **`Route::inertia()` tidak meneruskan parameter URL** ke props. Untuk route ber-parameter pakai controller (lihat `AdminPageController`).
+3. **`Route::inertia()` tidak meneruskan parameter URL** ke props. Untuk route ber-parameter pakai controller.
 4. **Wayfinder:** setelah ubah route, jalankan `php artisan wayfinder:generate`. Import route bernama dengan titik dari subfolder, mis. `import { request } from '@/routes/password'`, `import admin from '@/routes/admin'`.
 5. **Inertia mereset scroll setelah kunjungan**, jadi lompat ke anchor (`#...`) setelah navigasi tidak bisa diandalkan. Glossary tidak memakai anchor scroll: huruf aktif dibaca dari hash saat mount lalu diperbarui lewat event `hashchange` (lihat `pages/glossary.tsx`). Bila sudah di halaman yang sama, header memakai `<a>` biasa, bukan `<Link>`, supaya hanya hash yang berubah (`SubLink` di `site-header.tsx`).
 6. Pane browser Claude yang tersembunyi bisa menunda `requestAnimationFrame`/animasi saat diuji. Itu bukan bug aplikasi.
@@ -155,7 +160,6 @@ Login admin tersedia di `/adminTryOut` dengan panel visual yang memakai `auth-la
 
 1. Login/daftar/lupa password peserta lewat API (`login/login_api`, `login/registrasi`, `login/get_paket` di situs lama), plus reCAPTCHA.
 2. Bedakan menu admin per nilai `access` (admin, koordinator, editor) setelah nilai aslinya dari API diketahui.
-3. Ganti `dummy.ts` per halaman admin dengan data API, mulai dari Data Pelajaran (`admin/pelajaran/ListPelajaran/{page}`); petakan field API ke tipe yang sudah ada di `dummy.ts`.
+3. Tahap 2 admin: sambungkan aksi tulis (tambah/ubah/hapus/toggle/upload) per halaman ke endpoint tulis di controller admin lama, diuji dengan `Http::fake`.
 4. Halaman peserta: dashboard peserta, Latihan, TryOut dengan timer, analisis per topik, sertifikat.
 5. Ganti foto hotlink di landing dengan foto sendiri; tambahkan favicon dari `logo-mark.svg`.
-6. Dashboard admin: ambil angka dari data yang sama dengan halaman lain.

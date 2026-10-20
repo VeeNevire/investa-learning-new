@@ -1,3 +1,5 @@
+import { Reveal, Stagger, StaggerItem } from '@/components/landing/motion';
+
 const steps = [
     {
         title: 'Pelajari materi per topik',
@@ -25,7 +27,7 @@ export default function HowItWorksSection() {
     return (
         <section id="cara-belajar" className="scroll-mt-20 bg-white py-24">
             <div className="mx-auto max-w-7xl px-6 lg:px-12">
-                <div className="mb-14 max-w-2xl">
+                <Reveal className="mb-14 max-w-2xl">
                     <h2 className="mb-4 text-4xl leading-tight font-extrabold tracking-tight text-ink sm:text-5xl">
                         Cara belajar di InvestaLearning
                     </h2>
@@ -34,11 +36,15 @@ export default function HowItWorksSection() {
                         jawaban benar bernilai 1 dan tidak ada pengurangan nilai
                         untuk jawaban salah.
                     </p>
-                </div>
+                </Reveal>
 
-                <ol className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+                <Stagger
+                    as="ol"
+                    className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"
+                >
                     {steps.map((step, index) => (
-                        <li
+                        <StaggerItem
+                            as="li"
                             key={step.title}
                             className="flex flex-col gap-4 rounded-2xl border border-line bg-canvas p-6"
                         >
@@ -51,9 +57,9 @@ export default function HowItWorksSection() {
                             <p className="text-sm leading-relaxed text-slate-600">
                                 {step.description}
                             </p>
-                        </li>
+                        </StaggerItem>
                     ))}
-                </ol>
+                </Stagger>
             </div>
         </section>
     );

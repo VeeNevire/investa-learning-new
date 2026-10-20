@@ -1,11 +1,7 @@
 import { Head, Link, usePage } from '@inertiajs/react';
 import { useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
-import {
-    itemUrl,
-    mainSections,
-    systemSection,
-} from '@/components/admin/admin-nav';
+import { mainSections, systemSection } from '@/components/admin/admin-nav';
 import type { NavGroup, NavSection } from '@/components/admin/admin-nav';
 import Icon from '@/components/admin/icon';
 import { DEMO_TOAST_EVENT } from '@/components/admin/ui';
@@ -275,7 +271,7 @@ function GroupView({
     onNavigate?: () => void;
 }) {
     const containsActive =
-        group.items?.some((item) => itemUrl(item) === path) ?? false;
+        group.items?.some((item) => item.href === path) ?? false;
     const [open, setOpen] = useState(containsActive);
 
     if (group.href) {
@@ -334,12 +330,12 @@ function GroupView({
                         className="absolute top-3 bottom-3 left-[23px] w-px bg-line"
                     />
                     {group.items.map((item) => {
-                        const active = itemUrl(item) === path;
+                        const active = item.href === path;
 
                         return (
                             <Link
-                                key={item.slug}
-                                href={itemUrl(item)}
+                                key={item.href}
+                                href={item.href}
                                 onClick={onNavigate}
                                 aria-current={active ? 'page' : undefined}
                                 className={cn(

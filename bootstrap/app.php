@@ -1,5 +1,6 @@
 <?php
 
+use App\Exceptions\InvestaApiUnavailable;
 use App\Http\Middleware\EnsureUserIsAdmin;
 use App\Http\Middleware\HandleInertiaRequests;
 use Illuminate\Foundation\Application;
@@ -7,6 +8,7 @@ use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 use Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -27,4 +29,16 @@ return Application::configure(basePath: dirname(__DIR__))
         $exceptions->shouldRenderJsonWhen(
             fn (Request $request) => $request->is('api/*') || $request->expectsJson(),
         );
+
+        // Admin pages read everything from the backend API; when it is down,
+        // show that inside the admin layout instead of a server error.
+        $exceptions->render(function (InvestaApiUnavailable $exception, Request $request) {
+            if (! $request->is('admin', 'admin/*') || ! $request->session()->has('admin')) {
+                return null;
+            }
+
+            return Inertia::render('admin/api-unavailable', ['message' => $exception->getMessage()])
+                ->toResponse($request)
+                ->setStatusCode(503);
+        });
     })->create();

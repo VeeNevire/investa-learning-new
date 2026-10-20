@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { ReactNode } from 'react';
 import Icon from '@/components/admin/icon';
 import type { IconName } from '@/components/admin/icon';
@@ -5,8 +6,11 @@ import { cn } from '@/lib/utils';
 
 export const DEMO_TOAST_EVENT = 'admin-demo-toast';
 
-// The admin panel runs on dummy data: actions only show a notice.
-export function demoToast(message = 'Mode demo: perubahan tidak disimpan.') {
+// Saving, editing and deleting are not connected to the backend yet, so those
+// actions only show a notice.
+export function demoToast(
+    message = 'Belum tersambung: perubahan tidak disimpan.',
+) {
     window.dispatchEvent(
         new CustomEvent<string>(DEMO_TOAST_EVENT, { detail: message }),
     );
@@ -187,7 +191,41 @@ export function StatTile({
     );
 }
 
-// Flat placeholder standing in for uploaded images in the demo.
+// An image uploaded through the old site. Falls back to a labelled
+// placeholder when there is no file or it fails to load.
+export function RemoteImage({
+    src,
+    alt,
+    ratio = 'aspect-video',
+    fit = 'cover',
+}: {
+    src: string | null;
+    alt: string;
+    ratio?: string;
+    fit?: 'cover' | 'contain';
+}) {
+    const [failed, setFailed] = useState(false);
+
+    if (!src || failed) {
+        return <ImagePlaceholder label={alt} ratio={ratio} tone="slate" />;
+    }
+
+    return (
+        <img
+            src={src}
+            alt={alt}
+            loading="lazy"
+            onError={() => setFailed(true)}
+            className={cn(
+                'w-full rounded-xl bg-slate-50',
+                ratio,
+                fit === 'cover' ? 'object-cover' : 'object-contain p-2',
+            )}
+        />
+    );
+}
+
+// Flat placeholder for images that are missing.
 export function ImagePlaceholder({
     label,
     ratio = 'aspect-video',

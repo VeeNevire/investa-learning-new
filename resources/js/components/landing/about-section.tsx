@@ -1,3 +1,4 @@
+import { Reveal, Stagger, StaggerItem } from '@/components/landing/motion';
 import { cn } from '@/lib/utils';
 
 const photos = [
@@ -43,7 +44,7 @@ export default function AboutSection() {
     return (
         <section id="tentang-kami" className="scroll-mt-20 bg-white py-24">
             <div className="mx-auto max-w-7xl px-6 lg:px-12">
-                <div className="mb-16 max-w-3xl">
+                <Reveal className="mb-16 max-w-3xl">
                     <h2 className="mb-4 text-4xl leading-tight font-extrabold tracking-tight text-ink sm:text-5xl">
                         Dipercaya institusi keuangan
                     </h2>
@@ -60,13 +61,16 @@ export default function AboutSection() {
                         sama dengan berbagai institusi untuk mempersiapkan
                         profesionalnya menghadapi ujian sertifikasi.
                     </p>
-                </div>
+                </Reveal>
 
                 <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
                     <div className="lg:col-span-7" aria-hidden="true">
-                        <div className="relative no-scrollbar flex items-center gap-2 overflow-x-auto rounded-3xl pt-2 pb-4 sm:gap-3">
+                        <Stagger
+                            gap={0.1}
+                            className="relative no-scrollbar flex items-center gap-2 overflow-x-auto rounded-3xl pt-2 pb-4 sm:gap-3"
+                        >
                             {photos.map((photo) => (
-                                <div
+                                <StaggerItem
                                     key={photo.src}
                                     className={cn(
                                         'shrink-0 overflow-hidden rounded-2xl',
@@ -80,18 +84,22 @@ export default function AboutSection() {
                                         alt=""
                                         className="h-full w-full object-cover"
                                     />
-                                </div>
+                                </StaggerItem>
                             ))}
-                        </div>
+                        </Stagger>
                     </div>
 
-                    <div className="lg:col-span-5">
+                    <Reveal delay={0.15} className="lg:col-span-5">
                         <h3 className="mb-6 text-2xl font-bold tracking-tight text-ink">
                             Pelatihan inhouse terakhir
                         </h3>
-                        <ul className="divide-y divide-slate-100 border-y border-slate-100">
+                        <Stagger
+                            as="ul"
+                            className="divide-y divide-slate-100 border-y border-slate-100"
+                        >
                             {trainings.map((training) => (
-                                <li
+                                <StaggerItem
+                                    as="li"
                                     key={`${training.client}-${training.date}`}
                                     className="flex items-center justify-between gap-4 py-4"
                                 >
@@ -106,16 +114,16 @@ export default function AboutSection() {
                                     <span className="shrink-0 text-xs font-semibold text-slate-600">
                                         {training.date}
                                     </span>
-                                </li>
+                                </StaggerItem>
                             ))}
-                        </ul>
+                        </Stagger>
                         <a
                             href="mailto:analyst@investalearning.com"
                             className="mt-6 inline-flex text-sm font-semibold text-ink underline decoration-brand decoration-2 underline-offset-4 hover:decoration-ink"
                         >
                             Ajukan pelatihan inhouse untuk institusi Anda
                         </a>
-                    </div>
+                    </Reveal>
                 </div>
             </div>
         </section>

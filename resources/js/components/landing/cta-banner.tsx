@@ -1,10 +1,11 @@
 import { Link } from '@inertiajs/react';
+import { Reveal } from '@/components/landing/motion';
 import { register } from '@/routes';
 
 export default function CtaBanner() {
     return (
         <section className="relative overflow-hidden bg-ink py-16 text-white">
-            <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 md:flex-row lg:px-12">
+            <Reveal className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 md:flex-row lg:px-12">
                 <div>
                     <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
                         Siap menghadapi Ujian Standar Profesi Pasar Modal?
@@ -30,7 +31,7 @@ export default function CtaBanner() {
                         Tanya via WhatsApp
                     </a>
                 </div>
-            </div>
+            </Reveal>
         </section>
     );
 }

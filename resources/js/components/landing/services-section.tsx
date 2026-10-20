@@ -1,3 +1,5 @@
+import { Reveal, Stagger, StaggerItem } from '@/components/landing/motion';
+
 const services = [
     {
         title: 'Sertifikasi Keuangan & Pasar Modal',
@@ -30,7 +32,7 @@ export default function ServicesSection() {
             className="scroll-mt-20 border-y border-line bg-canvas py-24"
         >
             <div className="mx-auto max-w-7xl px-6 lg:px-12">
-                <div className="mb-14 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+                <Reveal className="mb-14 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
                     <div className="max-w-2xl">
                         <h2 className="mb-4 text-4xl leading-tight font-extrabold tracking-tight text-ink sm:text-5xl">
                             Training & Investment Advisory
@@ -46,11 +48,14 @@ export default function ServicesSection() {
                             {deliveryModes.join(' · ')}
                         </span>
                     </p>
-                </div>
+                </Reveal>
 
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+                <Stagger
+                    gap={0.12}
+                    className="grid grid-cols-1 gap-6 md:grid-cols-3"
+                >
                     {services.map((service) => (
-                        <div
+                        <StaggerItem
                             key={service.title}
                             className="rounded-3xl border border-slate-100 bg-white p-7 shadow-soft"
                         >
@@ -68,9 +73,9 @@ export default function ServicesSection() {
                                     </li>
                                 ))}
                             </ul>
-                        </div>
+                        </StaggerItem>
                     ))}
-                </div>
+                </Stagger>
             </div>
         </section>
     );
