@@ -12,7 +12,17 @@ export default function AuthLayout({
 }) {
     return (
         <>
-            <Head title={title} />
+            <Head title={title}>
+
+                {/* Website Metadata */}
+                <meta name="application-name" content="Nama Website" />
+                <meta name="theme-color" content="#071b3a" />
+
+                {/* Open Graph */}
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content={title} />
+                <meta property="og:image" content="/logo.png" />
+            </Head>
             <div className="flex min-h-screen flex-col bg-canvas text-ink antialiased selection:bg-brand/25">
                 <header className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-6 sm:px-6 lg:px-0">
                     <Link href={home()} className="flex items-center gap-2">

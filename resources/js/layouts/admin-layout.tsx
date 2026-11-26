@@ -38,7 +38,17 @@ export default function AdminLayout({
 
     return (
         <>
-            <Head title={`${title} · Admin`} />
+            <Head title={`${title} - Admin`}>
+
+                {/* Website Metadata */}
+                <meta name="application-name" content="Nama Website" />
+                <meta name="theme-color" content="#071b3a" />
+
+                {/* Open Graph */}
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content={title} />
+                <meta property="og:image" content="/logo.png" />
+            </Head>
             {toast && (
                 <div
                     role="status"

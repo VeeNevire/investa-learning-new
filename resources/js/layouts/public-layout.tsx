@@ -14,7 +14,17 @@ export default function PublicLayout({
 }) {
     return (
         <>
-            <Head title={title} />
+            <Head title={title}>
+
+                {/* Website Metadata */}
+                <meta name="application-name" content="Nama Website" />
+                <meta name="theme-color" content="#071b3a" />
+
+                {/* Open Graph */}
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content={title} />
+                <meta property="og:image" content="/logo.png" />
+            </Head>
             <MotionProvider>
                 <div className="min-h-screen overflow-x-clip bg-canvas text-ink antialiased selection:bg-brand/25 selection:text-ink">
                     <SiteHeader />
