@@ -27,16 +27,16 @@ const linkColumns = [
         title: 'Kontak',
         links: [
             {
-                label: 'info@investalearning.com',
-                href: 'mailto:info@investalearning.com',
+                label: 'investalearning1@gmail.com',
+                href: 'mailto:info@investalearning1@gmail.com',
             },
             {
-                label: 'analyst@investalearning.com',
-                href: 'mailto:analyst@investalearning.com',
+                label: 'investalearning.com',
+                href: 'https://investalearning.com',
             },
             {
-                label: '0815-1962-9804 (WA)',
-                href: 'https://wa.me/6281519629804',
+                label: '+62 898-7502-966 (WA)',
+                href: 'https://wa.me/628987502966',
             },
         ],
     },

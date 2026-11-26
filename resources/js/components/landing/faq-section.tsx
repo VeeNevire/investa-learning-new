@@ -93,10 +93,10 @@ export default function FaqSection() {
                     <p className="text-base text-slate-600">
                         Tidak menemukan jawaban? Hubungi kami di{' '}
                         <a
-                            href="mailto:info@investalearning.com"
+                            href="mailto:investalearning1@gmail.com"
                             className="font-semibold text-ink underline underline-offset-4"
                         >
-                            info@investalearning.com
+                            investalearning1@gmail.com
                         </a>
                         .
                     </p>

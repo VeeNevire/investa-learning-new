@@ -15,31 +15,28 @@ export default function ContactUs() {
                 <div className="grid gap-6 md:grid-cols-3">
                     <ContactCard label="E-mail">
                         <a
-                            href="mailto:info@investalearning.com"
+                            href="mailto:investalearning1@gmail.com"
                             className="break-all underline decoration-brand decoration-2 underline-offset-4 hover:decoration-ink"
                         >
-                            info@investalearning.com
+                            investalearning1@gmail.com
                         </a>
                     </ContactCard>
+                  
                     <ContactCard label="WhatsApp (WA Only)">
                         <a
-                            href="https://wa.me/6281519629804"
+                            href="https://wa.me/628987502966"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="underline decoration-brand decoration-2 underline-offset-4 hover:decoration-ink"
                         >
-                            0815-1962-9804
+                            +62 898-7502-966
                         </a>
                     </ContactCard>
                     <ContactCard label="Alamat">
-                        <span className="block font-bold">
-                            INVESTALEARNING.COM
-                        </span>
                         <span className="block font-normal text-slate-600">
-                            Jl. Tentara Pelajar, Rukan Permata Senayan Blok
-                            E56-57
+                            Cibubur Country, komplek RFP I No.8, Cikeas Udik, Kec. Gn. Putri
                             <br />
-                            Jakarta Selatan
+                             Kabupaten Bogor, Jawa Barat 16966
                         </span>
                     </ContactCard>
                 </div>
